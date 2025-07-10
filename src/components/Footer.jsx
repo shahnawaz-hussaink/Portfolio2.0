@@ -9,7 +9,7 @@ export default function Footer() {
         className="contact px-6 lg:px-32 max-w-4xl mx-auto text-center mb-5"
       >
         <p className="font-mono text-sm lg:text-md footer-content">
-            Brewed with code by <a href="./Profile.jpg" target="_blank" className="text-emerald-500">@Shahnawaz-Hussain</a>
+            Brewed with code by <a href="./Profile.webp" target="_blank" className="text-emerald-500">@Shahnawaz-Hussain</a>
         </p>
         <button
             onClick={() => setLiked(!liked)}

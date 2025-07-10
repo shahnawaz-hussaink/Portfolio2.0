@@ -56,7 +56,7 @@ export default function Home() {
           </a>
           <button
             className="ml-4 px-5 py-2 border-2 border-emerald-600 rounded hover:bg-emerald-600 transition"
-            onClick={() => window.open("./Resume.webp", "_blank")}
+            onClick={() => window.open("./Resume.pdf", "_blank")}
           >
             Resume
           </button>
