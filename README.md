@@ -1,4 +1,4 @@
-# 🚀 PORTFOLIO2.0
+# 🚀 PORTFOLIO 2.0
 
 > **Transforming Visions into Seamless Digital Realities**
 
@@ -31,7 +31,7 @@
 
 ## 📌 Overview
 
-**Portfolio2.0** is a sleek and modern developer portfolio built using React and Tailwind CSS. It is designed to showcase your skills and projects while providing a top-tier development experience. This boilerplate makes customization and deployment effortless, ensuring a smooth journey from idea to deployment.
+**Portfolio 2.0** is a sleek and modern developer portfolio built using React and Tailwind CSS. It is designed to showcase my skills and projects while providing a top-tier development experience. This boilerplate makes customization and deployment effortless, ensuring a smooth journey from idea to deployment.
 
 ---
 
@@ -39,12 +39,13 @@
 
 | Feature | Description |
 |--------|-------------|
-| 🛠️ Gear | **Fast & Modern Stack** — Vite + React + Tailwind CSS ensures high-speed development. |
-| 🧹 Brush | **Code Quality First** — Pre-configured ESLint rules enforce best practices. |
-| 🌐 Globe | **SPA Routing** — Built-in Vercel config for smooth navigation & deployment. |
-| 🎨 Palette | **Responsive UI** — Pre-built components like Navbar, Footer, Social Sidebar. |
-| 🚀 Rocket | **Instant Updates** — Hot Module Replacement (HMR) for efficient development. |
-| 🔧 Toolbox | **Modular Codebase** — Clean, reusable, and easy-to-maintain architecture. |
+| 🛠️ Modern Stack | Uses Vite, React, and Tailwind CSS for fast and easy development. |
+| 🧹 Clean Code | ESLint helps keep your code clean and consistent. |
+| 🌐 Smooth Routing | Built-in support for single-page navigation and Vercel deployment. |
+| 🎨 Responsive Design | Ready-made components like Navbar, Footer, and Sidebar. |
+| 🚀 Live Updates | See changes instantly with Hot Module Replacement (HMR). |
+| 🔧 Easy to Customize | Simple, modular code structure for quick edits and updates. |
+
 
 ---
 
