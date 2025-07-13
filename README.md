@@ -7,18 +7,14 @@
 ![Languages Count](https://img.shields.io/github/languages/count/shahnawaz-hussaink/Portfolio2.0)
 
 ---
-
 ---
 
 
 ### 🌐 Portfolio 2.0
-[https://shahnawazfolio.com](https://portfolio2-0-pi-nine.vercel.app/)
+[![Screenshot](./Screenshot.png)](https://portfolio2-0-pi-nine.vercel.app/)
 
 
 ---
-
----
-
 ## 🧰 Built With
 
 - **React** – Front-end Library  
@@ -26,17 +22,6 @@
 - **Tailwind CSS** – Utility-first CSS framework  
 - **Vite** – Lightning-fast build tool  
 - **ESLint** – Code linting and formatting  
-- **PostCSS** + **Autoprefixer** – CSS optimization  
-- **npm** – Package manager  
-- **Markdown** – Documentation  
-- **JSON** – Config and data handling  
-
----
-
-## 📑 Table of Contents
-
-- [📌 Overview](#-overview)  
-- [🚀 Getting Started](#-getting-started)
 
 ---
 
@@ -57,16 +42,10 @@
 | 🚀 Live Updates | See changes instantly with Hot Module Replacement (HMR). |
 | 🔧 Easy to Customize | Simple, modular code structure for quick edits and updates. |
 
-
 ---
 
-## 🚀 Getting Started
+### 🌐 Portfolio 2.0
+[![Screenshot](./Screenshot.png)](https://portfolio2-0-pi-nine.vercel.app/)
 
-### ✅ Prerequisites
-
-Make sure you have the following installed on your system:
-
-- [Node.js](https://nodejs.org/) (v14 or above)
-- [npm](https://www.npmjs.com/)
 
 ---
