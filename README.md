@@ -42,10 +42,3 @@
 | 🚀 Live Updates | See changes instantly with Hot Module Replacement (HMR). |
 | 🔧 Easy to Customize | Simple, modular code structure for quick edits and updates. |
 
----
-
-### 🌐 Portfolio 2.0
-[![Screenshot](./Screenshot.png)](https://portfolio2-0-pi-nine.vercel.app/)
-
-
----
