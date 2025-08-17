@@ -1,7 +1,7 @@
 const projects = [
     {
       title: "STUDx - Campus Exchange Hub",
-      image: "./Studx.webp",
+      image: "./Studx.png",
       desc: "STUDx is a full-stack MERN platform designed exclusively for college students to buy, sell, or swap pre-owned items like books, gadgets, and furniture within their campus community. It ensures a safe, student-centric marketplace with categories, best deals, and featured products. The platform has a clean, responsive UI built with React and Tailwind CSS, while the backend is powered by Node.js, Express, and MongoDB for seamless data management.",
       stack: [
         "Frontend: React, Tailwind CSS",
