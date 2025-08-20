@@ -20,14 +20,6 @@ const projects = [
       live: "https://shahnawaz-hussaink.github.io/Netflix/",
     },
     {
-        title: "Colored Simon Says Game",
-        image: "./SimonSay.webp",
-        desc: "I built a classic Simon Says memory game using HTML, CSS, and JavaScript. The game challenges users to recall and repeat increasingly complex sequences of colors with smooth transitions and sound feedback, providing a fun and interactive experience.",
-        stack: ["Frontend: HTML, CSS, JavaScript"],
-        github: "https://github.com/shahnawaz-hussaink/SimonSaysGame",
-        live: "https://shahnawaz-hussaink.github.io/SimonSaysGame",
-    },
-    {
       title: "Random Dog Image Generator",
       image: "./RandomDog.webp",
       desc: "I created a Random Dog Image Generator using the Dog CEO API. This project fetches and displays a new dog image each time the user clicks a button. Built with HTML, CSS, and JavaScript, it demonstrates API integration, asynchronous JavaScript, and DOM manipulation in a fun and interactive way.",
@@ -38,6 +30,14 @@ const projects = [
       ],
       github: "https://github.com/shahnawaz-hussaink/Project-Dog",
       live: "https://shahnawaz-hussaink.github.io/Project-Dog/",
+    },
+    {
+        title: "Colored Simon Says Game",
+        image: "./SimonSay.webp",
+        desc: "I built a classic Simon Says memory game using HTML, CSS, and JavaScript. The game challenges users to recall and repeat increasingly complex sequences of colors with smooth transitions and sound feedback, providing a fun and interactive experience.",
+        stack: ["Frontend: HTML, CSS, JavaScript"],
+        github: "https://github.com/shahnawaz-hussaink/SimonSaysGame",
+        live: "https://shahnawaz-hussaink.github.io/SimonSaysGame",
     },
     {
     title: "Shah's Company Support Chat",
