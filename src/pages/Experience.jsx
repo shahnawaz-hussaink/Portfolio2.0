@@ -6,7 +6,7 @@ export default function Work(){
             >
                 <div className="w-full rounded-lg overflow-hidden">
                     <img
-                        src="Acehack.jpg" 
+                        src="Acehack.webp" 
                         alt="Work Experience"
                         className="w-full h-auto lg:opacity-75 rounded-lg hover:opacity-100 transition"
                     />
