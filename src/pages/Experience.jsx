@@ -26,20 +26,7 @@ export default function Work(){
                         <li>Worked on frontend using React and Tailwind CSS, integrating responsive UI and component logic.</li>
                         <li>Learned to work in fast-paced environments and present the project to a judging panel.</li>
                     </ul>
-                    </div>
-                    {/* <div></div>
-                    <div className="work-info pb-10">
-                    <h2 className="text-3xl font-bold font-mono mb-12 pt-25">
-                        Participant <span className="text-emerald-400">@ AceHack Hackathon, Jaipur</span>
-                    </h2>
-                    <p className="text-sm mb-2">Feb 2025</p>
-                    <ul className="list-disc list-inside space-y-2">
-                        <li>Collaborated with a team of developers to build a web-based auction platform for students.</li>
-                        <li>Worked on frontend using React and Tailwind CSS, integrating responsive UI and component logic.</li>
-                        <li>Learned to work in fast-paced environments and present the project to a judging panel.</li>
-                    </ul>
-                    </div> */}
-
+                    </div> 
                 </div>
         </>
     );
