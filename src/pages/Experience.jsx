@@ -47,10 +47,7 @@ export default function Work() {
             <span className="experience-heading text-2xl lg:text-3xl">Where I've Worked</span>
           </a>
         </h1>
-        <div className="h-[1px] w-full bg-emerald-400/30"></div>
       </div>
-
-      
       <div className="relative">
         
         <div className="absolute left-0 top-0 bottom-0 w-[2px] bg-emerald-400/30 hidden lg:block"></div>
