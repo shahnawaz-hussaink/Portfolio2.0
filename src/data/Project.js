@@ -1,4 +1,18 @@
 const projects = [
+  {
+  title: "Mind-Z",
+  image: "./mind-z.webp",
+  desc: "Mind-Z is an AI-powered mental health chatbot built using the MERN stack. It allows users to track their mood, have conversations about their feelings, and explore helpful mental health resources, all within a supportive and user-friendly environment.",
+  stack: [
+    "Frontend: React, Tailwind CSS",
+    "Backend: Node.js, Express.js",
+    "Database: MongoDB (NoSQL)",
+    "AI Integration: OpenAI API",
+    "Runtime: Node.js"
+  ],
+  github: "https://github.com/shahnawaz-hussaink/Mind-Z", 
+  live: "https://github.com/shahnawaz-hussaink/Mind-Z" 
+},
     {
       title: "STUDx - Campus Exchange Hub",
       image: "./screencapture-localhost-5173-2025-08-17-17_42_59-2.png",
@@ -10,6 +24,24 @@ const projects = [
       ],
       github: "https://github.com/shahnawaz-hussaink/studx",
       live: "https://github.com/shahnawaz-hussaink/studx",
+    },
+    {
+      title: "Portfolio Website 2.0",
+      image: "./Portfolio.webp",
+      desc: "I designed and developed a fully responsive personal portfolio using React and Tailwind CSS. It showcases my projects, skills, and experience in a clean and accessible layout, with smooth transitions and a modern UI to highlight my web development capabilities.",
+      stack: [
+        "Frontend: HTML, CSS, JavaScript, React"
+      ],
+      github: "https://github.com/shahnawaz-hussaink/portfolio2.0",
+      live: "https://portfolio2-0-pi-nine.vercel.app",
+    },
+    {
+        title: "Personal Portfolio",
+        image: "./OldPortfolio.webp",
+        desc: "I created an earlier version of my personal portfolio using HTML, CSS, and vanilla JavaScript. It featured a responsive layout, smooth scrolling, and interactive UI sections like About, Projects, and Contact, designed to showcase my skills and work in a clean and simple format.",
+        stack: ["Frontend: HTML, CSS, JavaScript"],
+        github: "https://github.com/shahnawaz-hussaink/Portfolio",
+        live: "https://shahnawaz-hussaink.github.io/Portfolio/"
     },
     {
       title: "Netflix.com Clone",
@@ -32,30 +64,6 @@ const projects = [
       live: "https://shahnawaz-hussaink.github.io/Project-Dog/",
     },
     {
-        title: "Colored Simon Says Game",
-        image: "./SimonSay.webp",
-        desc: "I built a classic Simon Says memory game using HTML, CSS, and JavaScript. The game challenges users to recall and repeat increasingly complex sequences of colors with smooth transitions and sound feedback, providing a fun and interactive experience.",
-        stack: ["Frontend: HTML, CSS, JavaScript"],
-        github: "https://github.com/shahnawaz-hussaink/SimonSaysGame",
-        live: "https://shahnawaz-hussaink.github.io/SimonSaysGame",
-    },
-    {
-    title: "Shah's Company Support Chat",
-    image: "./SupportChat.webp",
-    desc: "I built a real-time customer support chat application for Shah's Company using HTML, CSS, and JavaScript. The interface allows users to send and receive messages with a simple, clean UI. It focuses on simulating live support interaction in a user-friendly way.",
-    stack: ["Frontend: HTML, CSS, JavaScript"],
-    github: "https://github.com/shahnawaz-hussaink/ChatbotSupport",  
-    live: "https://shahnawaz-hussaink.github.io/ChatbotSupport/"
-    },
-    {
-        title: "Personal Portfolio (Basic)",
-        image: "./OldPortfolio.webp",
-        desc: "I created an earlier version of my personal portfolio using HTML, CSS, and vanilla JavaScript. It featured a responsive layout, smooth scrolling, and interactive UI sections like About, Projects, and Contact, designed to showcase my skills and work in a clean and simple format.",
-        stack: ["Frontend: HTML, CSS, JavaScript"],
-        github: "https://github.com/shahnawaz-hussaink/Portfolio",
-        live: "https://shahnawaz-hussaink.github.io/Portfolio/"
-    },
-    {
       title: "E-Commerce App Homepage",
       image: "./ShopOn.webp",
       desc: "I developed the frontend of ShopOn, a modern e-commerce website, using HTML, CSS, and JavaScript. The design includes product listings, navigation menus, and a responsive layout, focusing on clean UI and smooth user experience for online shopping platforms.",
@@ -64,15 +72,14 @@ const projects = [
       live: "https://shahnawaz-hussaink.github.io/ShopOn/",
     },
     {
-      title: "Portfolio Website",
-      image: "./Portfolio.webp",
-      desc: "I designed and developed a fully responsive personal portfolio using React and Tailwind CSS. It showcases my projects, skills, and experience in a clean and accessible layout, with smooth transitions and a modern UI to highlight my web development capabilities.",
-      stack: [
-        "Frontend: HTML, CSS, JavaScript, React"
-      ],
-      github: "https://github.com/shahnawaz-hussaink/portfolio2.0",
-      live: "https://portfolio2-0-pi-nine.vercel.app",
+        title: "Colored Simon Says Game",
+        image: "./SimonSay.webp",
+        desc: "I built a classic Simon Says memory game using HTML, CSS, and JavaScript. The game challenges users to recall and repeat increasingly complex sequences of colors with smooth transitions and sound feedback, providing a fun and interactive experience.",
+        stack: ["Frontend: HTML, CSS, JavaScript"],
+        github: "https://github.com/shahnawaz-hussaink/SimonSaysGame",
+        live: "https://shahnawaz-hussaink.github.io/SimonSaysGame",
     },
+    
   ];
 
   export default projects;
