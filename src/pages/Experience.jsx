@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import experiences from '../data/experiences';
+import React, { useState, useEffect, useRef } from "react";
+import experiences from "../data/experiences";
 
 export default function Work() {
   const [showAll, setShowAll] = useState(false);
@@ -14,7 +14,7 @@ export default function Work() {
           const index = cardRefs.current.indexOf(entry.target);
           if (index !== -1) {
             if (entry.isIntersecting) {
-              setVisibleCards((prev) => 
+              setVisibleCards((prev) =>
                 prev.includes(index) ? prev : [...prev, index]
               );
             } else {
@@ -25,7 +25,7 @@ export default function Work() {
       },
       {
         threshold: 0.2,
-        rootMargin: '-50px 0px -50px 0px'
+        rootMargin: "-50px 0px -50px 0px",
       }
     );
 
@@ -42,20 +42,19 @@ export default function Work() {
 
   return (
     <div className="px-6 mx-auto md:px-20 lg:px-50 max-w-screen-xl mt-20">
-      {/* Section Heading with Horizontal Line */}
       <div id="experience" className="font-mono mb-12 flex items-center gap-4">
         <h1 className="whitespace-nowrap">
           <a className="text-white hover:text-emerald-400 transition">
             <span className="text-md lg:text-2xl text-emerald-400">02. </span>
-            <span className="experience-heading text-2xl lg:text-3xl">Where I've Worked</span>
+            <span className="experience-heading text-2xl lg:text-3xl">
+              Where I've Worked
+            </span>
           </a>
         </h1>
         <div className="h-[1px] w-full bg-emerald-400/30"></div>
       </div>
 
-      {/* Experience Cards with Timeline */}
       <div className="relative">
-        {/* Vertical Timeline Line */}
         <div className="absolute left-0 top-0 bottom-0 w-[2px] bg-emerald-400/30 hidden lg:block"></div>
 
         <div className="space-y-16 lg:pl-12">
@@ -65,23 +64,22 @@ export default function Work() {
               ref={(el) => (cardRefs.current[index] = el)}
               className={`experience relative transition-all duration-700 ${
                 visibleCards.includes(index)
-                  ? 'opacity-100 translate-y-0'
-                  : 'opacity-0 translate-y-10'
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
               }`}
             >
-              {/* Timeline Dot */}
               <div className="absolute -left-[51px] top-8 hidden lg:block">
                 <div className="w-4 h-4 rounded-full bg-emerald-400 border-4 border-slate-900"></div>
               </div>
 
-              {/* Card Content */}
-              <div className={`grid grid-cols-1 lg:grid-cols-2 gap-10 items-start ${
-                index % 2 === 0 ? '' : 'lg:grid-flow-dense'
-              }`}>
-                {/* Image */}
-                <div 
+              <div
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-10 items-start ${
+                  index % 2 === 0 ? "" : "lg:grid-flow-dense"
+                }`}
+              >
+                <div
                   className={`w-full rounded-lg overflow-hidden order-2 lg:order-none ${
-                    index % 2 === 0 ? '' : 'lg:col-start-2'
+                    index % 2 === 0 ? "" : "lg:col-start-2"
                   }`}
                 >
                   <img
@@ -91,12 +89,14 @@ export default function Work() {
                   />
                 </div>
 
-                {/* Content */}
-                <div className={`experience-info order-1 lg:order-none ${
-                  index % 2 === 0 ? '' : 'lg:col-start-1 lg:row-start-1'
-                }`}>
+                <div
+                  className={`experience-info order-1 lg:order-none ${
+                    index % 2 === 0 ? "" : "lg:col-start-1 lg:row-start-1"
+                  }`}
+                >
                   <h2 className="text-2xl lg:text-3xl font-bold mb-3">
-                    {exp.title} <span className="text-emerald-400">@ {exp.company}</span>
+                    {exp.title}{" "}
+                    <span className="text-emerald-400">@ {exp.company}</span>
                   </h2>
                   <p className="text-sm text-emerald-600 mb-4">{exp.date}</p>
                   <ul className="list-disc list-inside space-y-2 text-gray-300">
@@ -111,7 +111,6 @@ export default function Work() {
         </div>
       </div>
 
-      {/* Show More/Less Button */}
       {experiences.length > 2 && (
         <div className="flex justify-center mt-12">
           <button
