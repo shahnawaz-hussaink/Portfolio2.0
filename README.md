@@ -11,7 +11,7 @@
 
 
 ### 🌐 Portfolio 2.0
-[![Screenshot](./Screenshot.png)](https://shahcodes.dev/)
+[![Screenshot](./portfolio2-0.png)](https://shahcodes.dev/)
 
 
 ---
