@@ -32,6 +32,7 @@ export default function Work() {
               <img
                 src={project.image}
                 alt={project.title}
+                loading="lazy"
                 className="w-full h-auto object-cover lg:opacity-75 rounded-lg hover:opacity-100 transition"
               />
             </a>
