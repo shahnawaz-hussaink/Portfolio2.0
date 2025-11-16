@@ -67,9 +67,9 @@ export default function Home() {
           aria-label="Toggle Menu"
         >
           {menuOpen ? (
-            <X size={28} className="text-teal-400" />
+            <X size={28} className="text-emerald-400" />
           ) : (
-            <Menu size={28} className="text-teal-400" />
+            <Menu size={28} className="text-emerald-400" />
           )}
 
         </button>
@@ -79,33 +79,33 @@ export default function Home() {
     <a
       href="#about"
       onClick={() => setMenuOpen(false)}
-      className="hover:text-teal-400 transition"
+      className="hover:text-emerald-400 transition"
     >
-      <span className="text-teal-400">01.</span> About
+      <span className="text-emerald-400">01.</span> About
     </a>
     <a
       href="#experience"
       onClick={() => setMenuOpen(false)}
-      className="hover:text-teal-400 transition"
+      className="hover:text-emerald-400 transition"
     >
-      <span className="text-teal-400">02.</span> Experience
+      <span className="text-emerald-400">02.</span> Experience
     </a>
     <a
       href="#work"
       onClick={() => setMenuOpen(false)}
-      className="hover:text-teal-400 transition"
+      className="hover:text-emerald-400 transition"
     >
-      <span className="text-teal-400">03.</span> Work
+      <span className="text-emerald-400">03.</span> Work
     </a>
     <a
       href="#contact"
       onClick={() => setMenuOpen(false)}
-      className="hover:text-teal-400 transition"
+      className="hover:text-emerald-400 transition"
     >
-      <span className="text-teal-400">04.</span> Contact
+      <span className="text-emerald-400">04.</span> Contact
     </a>
     <button
-      className="mt-2 px-5 py-2 border-2 border-teal-400 rounded hover:bg-teal-600 transition "
+      className="mt-2 px-5 py-2 border-2 text-emerald-400 rounded hover:text-emerald-400ransition "
       onClick={() => {
         setMenuOpen(false);
         window.open("./Resume.pdf", "_blank");
