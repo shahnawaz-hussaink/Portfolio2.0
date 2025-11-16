@@ -38,7 +38,7 @@ export default function Work() {
   }, [displayedExperiences.length]);
 
   return (
-    <div className="px-6 mx-auto md:px-20 lg:px-50 max-w-screen-xl mt-20">
+    <div className="work px-6 sm:px-10 md:px-20 lg:px-32 max-w-screen-xl mx-auto mt-20 pb-16">
     
       <div id="experience" className="font-mono mb-12 flex items-center gap-4">
         <h1 className="whitespace-nowrap">
