@@ -67,7 +67,7 @@ export default function About() {
         <div className="relative w-full max-w-xs aspect-square mx-auto mt-10 group">
             <div className="img-cover border-r-4 border-b-4 absolute top-4 left-4 w-64 h-64 lg:opacity-75 rounded-lg shadow-md border-emerald-600 transition-transform duration-500 ease-in-out group-hover:translate-x-2 group-hover:translate-y-2" />
                 <img
-                    src="Profile.webp"
+                    src="/Profile.webp"
                     alt="Shahnawaz Hussain"
                     className="absolute top-0 left-0 w-64 h-64 object-cover lg:opacity-75 rounded-lg  shadow-lg  transition-transform duration-500 ease-in-out group-hover:-translate-x-2 group-hover:-translate-y-2 group-hover:opacity-100"
                 />
