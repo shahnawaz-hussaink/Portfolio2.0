@@ -1,8 +1,8 @@
 const projects = [
   {
-    title: "Run2Rank – Fitness & Ranking Platform",
-    image: "./run2rank.webp",
-    desc: "Run2Rank is my first vibe-coding project, built with the help of my lovable AI. It’s a fitness-based ranking platform designed to motivate users through challenges, leaderboards, and progress tracking, blending creativity, experimentation, and real-world problem solving.",
+    title: "pyFit – Fitness & Ranking Platform",
+    image: "./pyFit.webp",
+    desc: "pyFit is my first vibe-coding project, built with the help of my lovable AI. It's a fitness-based ranking platform designed to motivate users through challenges, leaderboards, and progress tracking, blending creativity, experimentation, and real-world problem solving.",
     stack: [
         "React 18, TypeScript",
         "Tailwind CSS, Framer Motion",
@@ -10,8 +10,8 @@ const projects = [
         "Supabase (Auth & Backend)",
         "PostgreSQL"
     ],
-    github: "https://github.com/shahnawaz-hussaink/run2rank",
-    live: "https://run2rank.lovable.app/",
+    github: "https://github.com/shahnawaz-hussaink/pyFit",
+    live: "https://pyFit.lovable.app/",
 },
   {
   title: "Mind-Z",
