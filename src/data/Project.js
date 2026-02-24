@@ -1,7 +1,7 @@
 const projects = [
   {
     title: "pyFit – Fitness & Ranking Platform",
-    image: "./pyFit.webp",
+    image: "./run2rank.webp",
     desc: "pyFit is my first vibe-coding project, built with the help of my lovable AI. It's a fitness-based ranking platform designed to motivate users through challenges, leaderboards, and progress tracking, blending creativity, experimentation, and real-world problem solving.",
     stack: [
         "React 18, TypeScript",
