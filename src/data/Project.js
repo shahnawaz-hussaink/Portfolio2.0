@@ -11,7 +11,7 @@ const projects = [
         "PostgreSQL"
     ],
     github: "https://github.com/shahnawaz-hussaink/pyFit",
-    live: "https://pyFit.lovable.app/",
+    live: "https://pyFit.in/",
 },
   {
   title: "Mind-Z",
