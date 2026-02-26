@@ -21,7 +21,7 @@
     line-height: 25px;
 }
 html, body {
-  overscroll-behavior: none;
+    overscroll-behavior-y: auto;
   background-color: #0f172a; 
   margin: 0;
   padding: 0;

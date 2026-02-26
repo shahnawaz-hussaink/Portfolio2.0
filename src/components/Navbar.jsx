@@ -1,29 +1,32 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react"; 
 import "../style.css";
 import { motion } from "framer-motion";
 
 export default function Home() {
   const [showNavbar, setShowNavbar] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const lastScrollYRef = useRef(0);
   const [menuOpen, setMenuOpen] = useState(false); 
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
+      const delta = currentScrollY - lastScrollYRef.current;
 
-      if (currentScrollY > lastScrollY) {
-        setShowNavbar(false); 
-      } else {
-        setShowNavbar(true); 
+      if (Math.abs(delta) > 6) {
+        if (delta > 0) {
+          setShowNavbar(false);
+        } else {
+          setShowNavbar(true);
+        }
+
+        lastScrollYRef.current = currentScrollY;
       }
-
-      setLastScrollY(currentScrollY);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  }, []);
 
   return (
     <>

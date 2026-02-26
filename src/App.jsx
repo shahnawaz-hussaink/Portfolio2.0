@@ -10,7 +10,7 @@ function App() {
 
   return (
     <>
-      <div className="blur-none overscroll-none min-h-screen bg-slate-900 text-white overflow-x-hidden overflow-y-auto">
+      <div className="blur-none min-h-screen bg-slate-900 text-white overflow-x-hidden overflow-y-auto">
         <Home/>
       </div>
     </>
