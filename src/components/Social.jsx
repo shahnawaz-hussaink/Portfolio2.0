@@ -13,35 +13,35 @@ export default function Social() {
         <a
           href="https://github.com/shahnawaz-hussaink"
           target="_blank"
-          className="text-slate-600 hover:text-teal-600"
+          className="text-slate-600 hover:text-teal-600  transition-all duration-200 hover:scale-120"
         >
           <Github size={24} />
         </a>
         <a
           href="https://www.linkedin.com/in/shahnawaz-hussain-00b7b8226/"
           target="_blank"
-          className="text-slate-600 hover:text-teal-600"
+          className="text-slate-600 hover:text-teal-600  transition-all duration-200 hover:scale-120"
         >
           <Linkedin size={24} />
         </a>
         <a
           href="https://x.com/k_shahnawazhuss"
           target="_blank"
-          className="text-slate-600 hover:text-teal-600"
+          className="text-slate-600 hover:text-teal-600  transition-all duration-200 hover:scale-120"
         >
           <Twitter size={24} />
         </a>
         <a
           href="https://www.instagram.com/shahnawaz.hussaink"
           target="_blank"
-          className="text-slate-600 hover:text-teal-600"
+          className="text-slate-600 hover:text-teal-600  transition-all duration-200 hover:scale-120"
         >
           <Instagram size={24} />
         </a>
         <a
           href="#"
           target="_blank"
-          className="text-slate-600 hover:text-teal-600"
+          className="text-slate-600 hover:text-teal-600  transition-all duration-200 hover:scale-120"
         >
           <ExternalLink size={24} />
         </a>

@@ -64,14 +64,24 @@ export default function About() {
           </div>
         </div>
 
-        <div className="relative w-full max-w-xs aspect-square mx-auto mt-10 group">
-            <div className="img-cover border-r-4 border-b-4 absolute top-4 left-4 w-64 h-64 lg:opacity-75 rounded-lg shadow-md border-emerald-600 transition-transform duration-500 ease-in-out group-hover:translate-x-2 group-hover:translate-y-2" />
-                <img
-                    src="/Profile.webp"
-                    alt="Shahnawaz Hussain"
-                    className="absolute top-0 left-0 w-64 h-64 object-cover lg:opacity-75 rounded-lg  shadow-lg  transition-transform duration-500 ease-in-out group-hover:-translate-x-2 group-hover:-translate-y-2 group-hover:opacity-100"
-                />
-            </div>
+        <div className="relative w-64 h-64 mx-auto mt-10 group cursor-pointer">
+  
+  {/* Background placeholder box */}
+  <div className="absolute top-0 left-0 w-64 h-64 rounded-lg border-2 border-emerald-600 bg-emerald-950/40 transition-all duration-500 ease-in-out group-hover:bg-emerald-600/20" />
+
+  {/* Emerald color overlay on photo — fades out on hover */}
+  <div className="absolute top-0 left-0 w-64 h-64 rounded-lg bg-emerald-700/40 sm:z-10 transition-all duration-500 ease-in-out group-hover:opacity-0" />
+
+  {/* Photo */}
+  <img
+    src="/Profile.webp"
+    alt="Shahnawaz Hussain"
+    className="absolute top-0 left-0 w-64 h-64 object-cover rounded-lg shadow-lg
+               transition-all duration-500 ease-in-out
+               group-hover:-translate-x-3 group-hover:-translate-y-3
+               group-hover:scale-105 group-hover:shadow-emerald-500/40 group-hover:shadow-2xl"
+  />
+</div>
 
       </div>
       </motion.div>
