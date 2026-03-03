@@ -82,7 +82,7 @@ export default function Work() {
           onClick={() => {
             setShowAll(!showAll);
           }}
-          className="px-6 py-2 text-sm text-md font-semibold text-emerald-400 border border-emerald-400 rounded hover:bg-emerald-300 hover:text-gray-900 hover:text-md hover:-translate-x-1 hover:-translate-y-1 hover:scale-110 transition-all hover:shadow-lg hover:shadow-emerald-400/30 font-mono"
+          className="px-6 py-2 text-sm text-md font-semibold text-emerald-400 border border-emerald-400 rounded hover:bg-emerald-300 hover:text-gray-900 hover:text-md hover:-translate-x-1 hover:-translate-y-1 hover:scale-110 transition-all hover:shadow-lg hover:shadow-emerald-400/30 font-mono cursor-pointer"
         >
           {showAll ? "Show Less" : "Show More"}
         </button>

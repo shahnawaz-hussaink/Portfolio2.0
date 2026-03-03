@@ -35,7 +35,7 @@ export default function Contact() {
         <div className="mt-10 flex justify-center">
           <a href="mailto:shahnawaz.hussain96508@gmail.com">
             <button
-              className="px-8 py-4 text-md font-semibold text-emerald-400 border border-emerald-400 rounded hover:bg-emerald-300 hover:text-gray-900 hover:text-md hover:-translate-x-1 hover:-translate-y-1 hover:scale-110 transition-all hover:shadow-lg hover:shadow-emerald-400/30 font-mono"
+              className="px-8 py-4 text-md font-semibold text-emerald-400 border border-emerald-400 rounded hover:bg-emerald-300 hover:text-gray-900 hover:text-md hover:-translate-x-1 hover:-translate-y-1 hover:scale-110 transition-all hover:shadow-lg hover:shadow-emerald-400/30 font-mono cursor-pointer"
             >
               Say Hello!
             </button>

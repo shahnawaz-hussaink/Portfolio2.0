@@ -109,7 +109,7 @@ export default function Home() {
               <span className="text-emerald-400">04.</span> Contact
             </a>
             <button
-              className="mt-2 px-5 py-2 border-2 text-emerald-400 rounded hover:text-emerald-400ransition "
+              className="mt-2 px-5 py-2 border-2 text-emerald-400 rounded hover:text-emerald-400ransition cursor-pointer"
               onClick={() => {
                 setMenuOpen(false);
                 window.open("./Resume.pdf", "_blank");
