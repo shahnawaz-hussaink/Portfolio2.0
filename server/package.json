@@ -19,10 +19,12 @@
     "prettier": "^3.8.1"
   },
   "dependencies": {
+    "cloudinary": "^2.9.0",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.6",
     "dotenv": "^17.3.1",
     "express": "^5.2.1",
-    "mongoose": "^9.2.3"
+    "mongoose": "^9.2.3",
+    "multer": "^2.1.0"
   }
 }
