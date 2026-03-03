@@ -16,7 +16,7 @@ export default function Footer() {
             className="p-2 transition-all duration-200"
             >
             <Heart
-                className={`w-7 h-10 transform transition-all duration-300 ${
+                className={`w-7 h-10 transform transition-all duration-300 cursor-pointer ${
                     liked ? "fill-emerald-500 text-emerald-500 scale-110" : "text-gray-400 scale-100"
                     }`}
             />
