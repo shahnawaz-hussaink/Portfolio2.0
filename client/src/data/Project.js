@@ -1,5 +1,46 @@
 const projects = [
   {
+    title: "Debug Arena – Live Competitive Coding Platform",
+    image: "./debugarena.webp",
+    desc: "Debug Arena is a real-time competitive coding platform built for hosting structured DSA tournaments at college scale. It was successfully used in a live multi-college event with 35+ participants, delivering a seamless, crash-free experience with real-time monitoring, strict timers, and controlled competition environments.",
+    stack: [
+        "React 18",
+        "Tailwind CSS",
+        "Node.js, Express",
+        "Firebase Firestore (Realtime)",
+        "Monaco Editor",
+        "Judge0 API",
+        "Vercel & Render (Deployment)"
+    ],
+    github: "https://github.com/shahnawaz-hussaink/debug-arena",
+    live: "https://debug-arena.vercel.app/",
+},{
+    title: "VideoTube – Industry-Level Backend System",
+    image: "./VideoTube.webp",
+    desc: "VideoTube is a comprehensive backend project built to solidify real-world backend engineering practices. It includes modular architecture, complete controller implementations, authentication flows, and production-style code structure. The project emphasizes clean code, scalability, and industry standards learned through hands-on development.",
+    stack: [
+        "Node.js, Express",
+        "MongoDB, Mongoose",
+        "JWT Authentication",
+        "REST API Design",
+        "MVC Architecture"
+    ],
+    github: "https://github.com/shahnawaz-hussaink/Backend_Video_Tube",
+    live: "https://github.com/shahnawaz-hussaink/Backend_Video_Tube",
+},{
+    title: "URL-Shortener – Scalable URL Shortener (Backend Focused)",
+    image: "./url_Shortener.webp",
+    desc: "URL-Shortener is a backend-focused URL shortening service designed with system design principles in mind. It supports custom aliases, efficient redirection, and scalable ID generation using nanoid. The project explores real-world backend challenges such as routing performance, data modeling, and extensibility for features like analytics and caching.",
+    stack: [
+        "Node.js, Express",
+        "MongoDB",
+        "NanoID",
+        "REST APIs"
+    ],
+    github: "https://github.com/shahnawaz-hussaink/URL-Shortener",
+    live: "https://github.com/shahnawaz-hussaink/URL-Shortener",
+},
+  {
     title: "pyFit – Fitness & Ranking Platform",
     image: "./run2rank.webp",
     desc: "pyFit is my first vibe-coding project, built with the help of my lovable AI. It's a fitness-based ranking platform designed to motivate users through challenges, leaderboards, and progress tracking, blending creativity, experimentation, and real-world problem solving.",
