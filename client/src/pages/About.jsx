@@ -24,44 +24,40 @@ export default function About() {
           </div>
 
           <div className="about-text text-base sm:text-lg leading-relaxed font-normal">
-            <p className="mb-4">
-              Hello! My name is Shahnawaz, and I love building things that live on
-              the web. My interest in web development sparked during college when
-              I started exploring how websites work — what began as curiosity soon
-              turned into a passion for turning ideas into interactive, real-world
-              digital experiences.
-            </p>
-            <p className="mb-4">
-              Over time, I’ve built a variety of projects ranging from a text
-              editor to a full-fledged portfolio site, and even experimented with
-              backend tools like Node.js and MongoDB. I enjoy working across the
-              stack, constantly learning and refining both my frontend and backend
-              skills.
-            </p>
-            <p className="mb-4">
-              These days, I’m focused on creating clean, accessible, and
-              user-friendly applications while deepening my understanding of
-              full-stack development. I’m also actively learning about AI,
-              cybersecurity, and building side projects that push me to grow as a
-              developer.
-            </p>
-            <p className="mb-4">Here are a few technologies I’ve been working with recently:</p>
-
-            <div className="flex flex-wrap gap-10 mt-4">
-              <ul className="list-disc list-inside space-y-2">
-                <li>JavaScript (ES6+)</li>
-                <li>React</li>
-                <li>Tailwind CSS</li>
-                <li>Node.js</li>
-              </ul>
-              <ul className="list-disc list-inside space-y-2">
-                <li>Express</li>
-                <li>MongoDB</li>
-                <li>MySQL</li>
-                <li>Git & GitHub</li>
-              </ul>
-            </div>
-          </div>
+  <p className="mb-4">
+    Hello! I'm Shahnawaz, a third-year Computer Science undergrad at ARSD College,
+    University of Delhi. I got into web development out of curiosity — and somewhere
+    along the way, backend engineering became the thing I couldn't stop thinking about.
+    There's something satisfying about designing systems that hold up under real pressure.
+  </p>
+  <p className="mb-4">
+    Over the past year, I've gone deep on backend development — building an IRCTC-style
+    railway booking system with PostgreSQL and row-level locking, a real-time competitive
+    coding platform that ran live with 35+ participants, and several other projects around
+    auth, caching, queues, and API design. I don't just build to ship — I build to
+    understand how things actually work.
+  </p>
+  <p className="mb-4">
+    Right now I'm focused on system design fundamentals, Redis-based caching, BullMQ job
+    queues, and payment integrations. I'm also exploring DSA seriously and looking for
+    opportunities where I can contribute to real backend systems and keep growing fast.
+  </p>
+  <p className="mb-4">Here are a few technologies I've been working with recently:</p>
+  <div className="flex flex-wrap gap-10 mt-4">
+    <ul className="list-disc list-inside space-y-2">
+      <li>Node.js & Express</li>
+      <li>PostgreSQL & Prisma</li>
+      <li>MongoDB & Mongoose</li>
+      <li>Redis & BullMQ</li>
+    </ul>
+    <ul className="list-disc list-inside space-y-2">
+      <li>JWT & Auth flows</li>
+      <li>React & Tailwind CSS</li>
+      <li>Docker (learning)</li>
+      <li>Git & GitHub</li>
+    </ul>
+  </div>
+</div>
         </div>
 
         <div className="relative w-64 h-64 mx-auto mt-10 group cursor-pointer">

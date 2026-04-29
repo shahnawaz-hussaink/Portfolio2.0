@@ -27,7 +27,7 @@ export default function Intro(){
             </div>
             <div className="para-intro text-md md:text-xl lg:text-xl">
                 <p>
-                    I’m a software developer passionate about building exceptional digital experiences. I focus on creating accessible, human-centered products and continually work on personal and collaborative projects to sharpen my skills and contribute to meaningful tech solutions.
+                    I'm a backend-focused developer and CS undergrad at ARSD College, University of Delhi. I build things that actually work under pressure — from a railway booking system that handles concurrent seat locks to a live coding platform used by 35+ participants in a real college event. I care about clean architecture, real-world constraints, and writing code that holds up.
                 </p>
             </div>
         </div>

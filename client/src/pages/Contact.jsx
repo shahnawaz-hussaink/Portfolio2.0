@@ -25,11 +25,11 @@ export default function Contact() {
             Reach Out & Code
           </span>
           <p className="max-w-2xl mx-auto contact-content">
-            I'm currently exploring exciting new opportunities
-            where I can grow, contribute, and collaborate on impactful projects.
-            If you think we’d be a great match — whether it's for a role, a
-            project, or just a good conversation — feel free to drop a message.
-            I’d love to connect!
+            I'm a CS undergrad actively looking for backend development
+internships and collaborative projects. If you're working on something
+that involves real backend challenges — APIs, databases, queues, or
+system design — I'd genuinely love to hear about it. Feel free to reach
+out, I respond fast.
           </p>
         </div>
         <div className="mt-10 flex justify-center">
