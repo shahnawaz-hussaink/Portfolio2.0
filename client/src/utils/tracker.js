@@ -57,11 +57,18 @@ async function sendToWeb3Forms(subject, details) {
       ...details
     };
 
-    await fetch("https://api.web3forms.com/submit", {
+    const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       headers: { "Content-Type": "application/json", "Accept": "application/json" },
       body: JSON.stringify(body)
     });
+    
+    const resData = await response.json();
+    if (response.ok && resData.success) {
+      console.log("[TRACKER_SUCCESS] Email notification sent successfully via Web3Forms!", resData);
+    } else {
+      console.error("[TRACKER_API_FAILURE] Web3Forms rejected the notification submission:", resData);
+    }
   } catch (e) {
     console.error("[TRACKER_ERROR] Web3Forms submission failed", e);
   }
