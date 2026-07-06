@@ -11,7 +11,7 @@ export default function Intro() {
         <motion.div
           initial={{ opacity: 0, x: -10 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.6, delay: 0.55 }}
           className="flex items-center gap-3 font-mono text-xs text-accent uppercase tracking-widest mb-6"
         >
           <span className="w-2 h-2 bg-accent animate-pulse"></span>
@@ -23,7 +23,7 @@ export default function Intro() {
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
+            transition={{ duration: 0.8, delay: 0.75 }}
             className="font-display font-extrabold tracking-tight leading-[0.85] text-zinc-100 uppercase"
           >
             <span className="inline-block whitespace-nowrap text-[7.8vw] sm:text-6xl md:text-7xl lg:text-[5.5rem] xl:text-[6.5rem] bg-accent text-zinc-950 px-4 sm:px-6 py-1 sm:py-2 mb-2 sm:mb-4">
@@ -39,7 +39,7 @@ export default function Intro() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.8, delay: 1.05 }}
           className="mt-8 font-mono text-zinc-400 text-sm sm:text-lg max-w-2xl border-l border-zinc-800 pl-4 sm:pl-6 leading-relaxed"
         >
           <p>
@@ -53,7 +53,7 @@ export default function Intro() {
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.3 }}
+        transition={{ duration: 0.8, delay: 1.35 }}
         className="mt-16 border-t border-b border-zinc-800 py-6 grid grid-cols-1 md:grid-cols-3 gap-6 font-mono text-xs text-zinc-500"
       >
         <div className="flex flex-col gap-2">

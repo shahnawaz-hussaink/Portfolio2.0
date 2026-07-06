@@ -18,7 +18,14 @@ export default function About() {
   const skillsRight = ["JWT & Auth flows", "React & Tailwind CSS", "Docker (learning)", "Git & GitHub"];
 
   return (
-    <section id="about" className="py-24 border-t border-zinc-800 relative">
+    <motion.section
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.8 }}
+      id="about"
+      className="py-24 border-t border-zinc-800 relative"
+    >
       <div className="max-w-screen-xl mx-auto px-6 sm:px-12 md:px-20 lg:px-32">
         {/* Editorial Section Header */}
         <div className="mb-16 font-mono">
@@ -113,6 +120,6 @@ export default function About() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

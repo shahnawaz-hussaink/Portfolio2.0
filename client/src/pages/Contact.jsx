@@ -1,10 +1,15 @@
 import Footer from "../components/Footer";
 import Social from "../components/Social";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   return (
     <>
-      <section
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8 }}
         id="contact"
         className="py-24 border-t border-zinc-800 relative bg-[#09090b]"
       >
@@ -35,7 +40,7 @@ export default function Contact() {
             </a>
           </div>
         </div>
-      </section>
+      </motion.section>
       <Social />
       <Footer />
     </>

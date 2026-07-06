@@ -4,7 +4,6 @@ const experiences = [
     title: "Developer",
     company: "Cyber Physical Systems Laboratory",
     date: "Jun 2026 - Present",
-    image: "cps-lab.webp",
     type: "WORK",
     description: [
       "Developing real-time backend architectures and data ingestion APIs for cyber-physical and IoT telemetry networks.",
@@ -17,7 +16,6 @@ const experiences = [
     title: "Organising Conference Member",
     company: "India's International Movement to Unite Nations (IIMUN)",
     date: "Sep 2025 - Jan 2026",
-    image: "iimun.webp",
     type: "WORK",
     description: [
       "Led strategic communications and public outreach coordinates across multiple university and high-school delegates.",
@@ -30,7 +28,6 @@ const experiences = [
     title: "Participant",
     company: "AceHack Hackathon, Jaipur",
     date: "Mar 2025",
-    image: "Acehack.webp",
     type: "EVENT",
     description: [
       "Collaborated with a team of developers to build a web-based Expense tracker platform.",
@@ -43,7 +40,6 @@ const experiences = [
     title: "Participant",
     company: "Pitchcraft",
     date: "Oct 2025",
-    image: "Pitchcraft.webp",
     type: "EVENT",
     description: [
       "Developed an AI-powered rental platform to solve uncertainty and trust issues in the rental ecosystem.",

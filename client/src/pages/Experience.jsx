@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import experiences from "../data/experiences";
+import { motion } from "framer-motion";
 
 export default function Work() {
   const [activeId, setActiveId] = useState(experiences[0]?.id || null);
@@ -7,7 +8,14 @@ export default function Work() {
   const activeExperience = experiences.find((exp) => exp.id === activeId) || experiences[0];
 
   return (
-    <section id="experience" className="py-24 border-t border-zinc-800 relative bg-[#09090b]">
+    <motion.section
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.8 }}
+      id="experience"
+      className="py-24 border-t border-zinc-800 relative bg-[#09090b]"
+    >
       <div className="max-w-screen-xl mx-auto px-6 sm:px-12 md:px-20 lg:px-32">
         
         {/* Editorial Section Header */}
@@ -113,6 +121,6 @@ export default function Work() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

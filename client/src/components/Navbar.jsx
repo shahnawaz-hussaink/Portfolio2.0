@@ -44,7 +44,7 @@ export default function Home() {
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
+        transition={{ duration: 0.6, delay: 0.25 }}
       >
         <nav
           className={`fixed top-0 left-0 w-full h-20 z-50 px-6 sm:px-12 flex items-center justify-between transition-transform duration-300 font-mono ${

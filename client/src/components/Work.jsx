@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Github, ExternalLink } from "lucide-react";
+import { motion } from "framer-motion";
 import projects from "../data/Project";
 
 const projectStats = {
@@ -23,7 +24,14 @@ export default function Work() {
   const displayedProjects = showAll ? projects : projects.slice(0, 4);
 
   return (
-    <section id="work" className="py-24 border-t border-zinc-800 relative bg-[#09090b]">
+    <motion.section
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.8 }}
+      id="work"
+      className="py-24 border-t border-zinc-800 relative bg-[#09090b]"
+    >
       <div className="max-w-screen-2xl mx-auto px-6 sm:px-12 md:px-20 lg:px-32">
         
         {/* Section Header */}
@@ -150,6 +158,6 @@ export default function Work() {
           </div>
         )}
       </div>
-    </section>
+    </motion.section>
   );
 }
