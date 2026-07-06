@@ -14,8 +14,8 @@ export default function About() {
     setCoords({ x, y });
   };
 
-  const skillsLeft = ["Node.js & Express", "PostgreSQL & Prisma", "MongoDB & Mongoose", "Redis & BullMQ"];
-  const skillsRight = ["JWT & Auth flows", "React & Tailwind CSS", "Docker (learning)", "Git & GitHub"];
+  const skillsLeft = ["Node.js & React (Next.js)", "Go (Golang)", "PostgreSQL & MongoDB", "Redis & BullMQ"];
+  const skillsRight = ["Angular", "JWT & Auth flows", "Docker (learning)", "Git & GitHub"];
 
   return (
     <motion.section
@@ -41,16 +41,17 @@ export default function About() {
           <div className="lg:col-span-7 font-mono text-sm leading-relaxed text-zinc-400">
             <p className="mb-6">
               Hello! I'm Shahnawaz, a third-year Computer Science undergrad at ARSD College, University of Delhi. 
-              I got into web development out of curiosity — and somewhere along the way, backend engineering became the thing I couldn't stop thinking about. 
-              There's something satisfying about designing systems that hold up under real pressure.
+              I got into web development out of curiosity — and somewhere along the way, backend engineering and distributed systems became the things I couldn't stop thinking about. 
+              There's something deeply satisfying about designing scalable server architectures and database schemas that hold up under real concurrent load.
             </p>
             <p className="mb-6">
-              Over the past year, I've gone deep on backend development — building an IRCTC-style railway booking system with PostgreSQL and row-level locking, a real-time competitive coding platform that ran live with 35+ participants, and several other projects around auth, caching, queues, and API design. 
-              I don't just build to ship — I build to understand how things actually work.
+              Over the past year, I've focused heavily on backend systems and database engineering. 
+              I've built projects like an IRCTC-style railway booking system utilizing PostgreSQL and row-level transaction locking to prevent race conditions, and a real-time competitive coding platform that successfully orchestrated live DSA tournaments for 35+ participants. 
+              I also love expanding my skillset across different ecosystems — which is why I've been writing services in Go (Golang) and developing modular client-side apps with React, Next.js, and Angular.
             </p>
             <p className="mb-6">
-              Right now I'm focused on system design fundamentals, Redis-based caching, BullMQ job queues, and payment integrations. 
-              I'm also exploring DSA seriously and looking for opportunities where I can contribute to real backend systems and keep growing fast.
+              Right now, I'm diving deeper into system design patterns, Redis-based caching strategies, BullMQ job queues, and Docker containerization. 
+              I am actively practicing data structures and algorithms (DSA) and looking for backend developer internships where I can contribute to production-grade services, solve complex performance challenges, and learn from experienced engineers.
             </p>
 
             <div className="mt-8">

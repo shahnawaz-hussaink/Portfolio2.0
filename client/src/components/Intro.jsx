@@ -93,11 +93,11 @@ export default function Intro() {
             // TECH_STACK_CORE
           </span>
           <div className="text-accent uppercase">
-            Node.js / Express / TypeScript
+            Node.js & React / Next.js / Go
             <br />
-            PostgreSQL / Prisma / MongoDB
+            PostgreSQL & MongoDB / Redis
             <br />
-            Redis / BullMQ / Docker
+            Angular / TypeScript / Docker
           </div>
         </div>
       </motion.div>
