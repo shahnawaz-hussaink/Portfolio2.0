@@ -48,8 +48,8 @@ export default function About() {
               I expand my stack across environments, writing services in Go (Golang) and developing modular client applications with React/Next.js and Angular.
             </p>
             <p className="mb-6">
-              Currently, I'm working with Redis-based caching, BullMQ job queues, and Docker containerization. 
-              I am actively practicing DSA and looking for developer internships where I can solve backend bottlenecks and write efficient code.
+              Currently, I'm a Developer at the Cyber Physical Systems (CyPsi) Lab, building real-time backend architectures and high-frequency data ingestion APIs for telemetry networks. 
+              Alongside this, I'm refining my skills in Redis caching, BullMQ, and system design, while seeking backend engineering opportunities to solve complex scaling bottlenecks.
             </p>
 
             <div className="mt-8">
