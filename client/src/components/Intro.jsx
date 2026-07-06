@@ -26,10 +26,10 @@ export default function Intro() {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="font-display font-extrabold tracking-tight leading-[0.85] text-zinc-100 uppercase"
           >
-            <span className="block whitespace-nowrap text-[8.8vw] sm:text-6xl md:text-7xl lg:text-[5.5rem] xl:text-[6.5rem]">
+            <span className="inline-block whitespace-nowrap text-[7.8vw] sm:text-6xl md:text-7xl lg:text-[5.5rem] xl:text-[6.5rem] bg-accent text-zinc-950 px-4 sm:px-6 py-1 sm:py-2 mb-2 sm:mb-4">
               Shahnawaz
             </span>
-            <span className="block whitespace-nowrap text-[8.8vw] sm:text-6xl md:text-7xl lg:text-[5.5rem] xl:text-[6.5rem]">
+            <span className="block whitespace-nowrap text-[7.8vw] sm:text-6xl md:text-7xl lg:text-[5.5rem] xl:text-[6.5rem]">
               Hussain<span className="text-accent font-mono text-xl sm:text-5xl md:text-6xl">.</span>
             </span>
           </motion.h1>
