@@ -40,7 +40,7 @@ export default function About() {
           {/* Content Column */}
           <div className="lg:col-span-7 font-mono text-sm leading-relaxed text-zinc-400">
             <p className="mb-6">
-              Hello! I'm Shahnawaz, a CS undergrad at ARSD College, University of Delhi, specializing in backend engineering and database systems. 
+              Hello! I'm <a href="https://github.com/shahnawaz-hussaink" className="text-accent"> Shahnawaz</a>, a CS undergrad at ARSD College, University of Delhi, specializing in backend engineering and database systems. 
               I love designing clean server architectures and database schemas that perform under concurrent load.
             </p>
             <p className="mb-6">
