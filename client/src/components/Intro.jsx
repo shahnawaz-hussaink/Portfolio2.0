@@ -5,7 +5,7 @@ export default function Intro() {
     <section className="min-h-screen pt-36 px-6 sm:px-12 md:px-20 lg:px-32 flex flex-col justify-between max-w-screen-2xl mx-auto pb-12 relative overflow-hidden">
       {/* Absolute Background Accent Lines */}
       <div className="absolute top-0 right-1/4 w-[1px] h-full bg-zinc-900 pointer-events-none hidden md:block"></div>
-      
+
       <div className="flex-grow flex flex-col justify-center">
         {/* Monospace Metadata Tag */}
         <motion.div
@@ -30,7 +30,10 @@ export default function Intro() {
               Shahnawaz
             </span>
             <span className="block whitespace-nowrap text-[7.8vw]  sm:text-6xl md:text-7xl lg:text-[5.5rem] xl:text-[6.5rem]">
-              Hussain<span className="text-accent font-mono text-xl sm:text-5xl md:text-6xl">.</span>
+              Hussain
+              <span className="text-accent font-mono text-xl sm:text-5xl md:text-6xl">
+                .
+              </span>
             </span>
           </motion.h1>
         </div>
@@ -43,8 +46,11 @@ export default function Intro() {
           className="mt-8 font-mono text-zinc-400 text-sm sm:text-lg max-w-2xl border-l border-zinc-800 pl-4 sm:pl-6 leading-relaxed"
         >
           <p>
-            I'm a backend-focused developer and CS undergrad at ARSD College, University of Delhi. 
-            I build performant systems that handle concurrency constraints and high load — from a railway ticketing database locking engine to multi-participant competitive DSA platforms.
+            I'm a backend-focused developer and CS undergrad at ARSD College,
+            University of Delhi. I build performant systems that handle
+            concurrency constraints and high load — from a railway ticketing
+            database locking engine to multi-participant competitive DSA
+            platforms.
           </p>
         </motion.div>
       </div>
@@ -57,28 +63,40 @@ export default function Intro() {
         className="mt-16 border-t border-b border-zinc-800 py-6 grid grid-cols-1 md:grid-cols-3 gap-6 font-mono text-xs text-zinc-500"
       >
         <div className="flex flex-col gap-2">
-          <span className="text-[10px] uppercase text-zinc-600 tracking-wider">// FOCUS_AREAS</span>
+          <span className="text-[10px] uppercase text-zinc-600 tracking-wider">
+            // FOCUS_AREAS
+          </span>
           <div className="text-zinc-300">
-            [01] SYSTEM DESIGN & DATABASES<br />
-            [02] CONCURRENT TRANSACTION LOCKING<br />
+            [01] SYSTEM DESIGN & DATABASES
+            <br />
+            [02] CONCURRENT TRANSACTION LOCKING
+            <br />
             [03] API & EVENT QUEUE ARCHITECTURE
           </div>
         </div>
-        
+
         <div className="flex flex-col gap-2">
-          <span className="text-[10px] uppercase text-zinc-600 tracking-wider">// KEY_SYSTEMS_SHIPPED</span>
+          <span className="text-[10px] uppercase text-zinc-600 tracking-wider">
+            // KEY_SYSTEMS_SHIPPED
+          </span>
           <div className="text-zinc-300">
-            irctc_ticketing_backend (PostgreSQL / ACID)<br />
-            debug_arena_platform (Realtime / 35+ Scale)<br />
+            irctc_ticketing_backend (PostgreSQL / ACID)
+            <br />
+            debug_arena_platform (Realtime / 35+ Scale)
+            <br />
             videotube_server (Multer / Cloudinary)
           </div>
         </div>
 
         <div className="flex flex-col gap-2">
-          <span className="text-[10px] uppercase text-zinc-600 tracking-wider">// TECH_STACK_CORE</span>
+          <span className="text-[10px] uppercase text-zinc-600 tracking-wider">
+            // TECH_STACK_CORE
+          </span>
           <div className="text-accent uppercase">
-            Node.js / Express / TypeScript<br />
-            PostgreSQL / Prisma / MongoDB<br />
+            Node.js / Express / TypeScript
+            <br />
+            PostgreSQL / Prisma / MongoDB
+            <br />
             Redis / BullMQ / Docker
           </div>
         </div>
