@@ -87,7 +87,7 @@ const projects = [
     live: "https://github.com/shahnawaz-hussaink/studx",
   },
   {
-    title: "Portfolio Website 2.0",
+    title: "Portfolio Website",
     image: "./Portfolio.webp",
     desc: "I designed and developed a fully responsive personal portfolio using React and Tailwind CSS. It showcases my projects, skills, and experience in a clean and accessible layout, with smooth transitions and a modern UI to highlight my web development capabilities.",
     stack: [

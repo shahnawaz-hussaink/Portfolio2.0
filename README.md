@@ -1,4 +1,4 @@
-# ⚡ Shahnawaz Hussain // Portfolio 3.0
+# ⚡ Shahnawaz Hussain // Portfolio
 
 A high-performance personal portfolio built with **React 19**, **Tailwind CSS v4**, and **Vite 7**, designed with a custom **editorial brutalism & technical HUD** aesthetic. This repository showcases my projects, engineering focus, and professional history without relying on generic web templates.
 
