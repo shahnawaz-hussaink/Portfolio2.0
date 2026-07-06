@@ -95,6 +95,59 @@ async function sendToWeb3Forms(subject, details) {
   }
 }
 
+// Function to log visitor data to Google Sheets/Excel via SheetDB or Webhook
+async function sendToGoogleSheet(details) {
+  const SHEET_API_URL = import.meta.env.VITE_SHEET_API_URL;
+  if (!SHEET_API_URL) return;
+
+  try {
+    const isSheetDB = SHEET_API_URL.includes("sheetdb.io");
+    let body;
+
+    if (isSheetDB) {
+      body = JSON.stringify({
+        data: [{
+          IP: details.ip,
+          City: details.city,
+          Region: details.region,
+          Country: details.country,
+          Latitude: details.latitude,
+          Longitude: details.longitude,
+          ISP: details.isp,
+          Device: details.device,
+          Time: new Date().toLocaleString()
+        }]
+      });
+    } else {
+      body = JSON.stringify({
+        ip: details.ip,
+        city: details.city,
+        region: details.region,
+        country: details.country,
+        latitude: details.latitude,
+        longitude: details.longitude,
+        isp: details.isp,
+        device: details.device,
+        time: new Date().toLocaleString()
+      });
+    }
+
+    const response = await fetch(SHEET_API_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: body
+    });
+
+    if (response.ok) {
+      console.log("[TRACKER_SHEET_SUCCESS] Logged to Google Sheet successfully!");
+    } else {
+      console.error("[TRACKER_SHEET_FAILURE] Webhook sheet logging failed:", response.statusText);
+    }
+  } catch (e) {
+    console.error("[TRACKER_SHEET_ERROR] Google Sheets logging failed", e);
+  }
+}
+
 // Track page visit
 export async function trackVisit() {
   // Prevent double tracking in React Strict Mode (basic check)
@@ -102,11 +155,18 @@ export async function trackVisit() {
   window.sessionStorage.setItem("portfolio_tracked", "true");
 
   const info = await getVisitorInfo();
-  await sendToWeb3Forms(`New Portfolio Visitor: ${info.ip} (${info.city})`, info);
+  await Promise.allSettled([
+    sendToWeb3Forms(`New Portfolio Visitor: ${info.ip} (${info.city})`, info),
+    sendToGoogleSheet(info)
+  ]);
 }
 
 // Track heart interaction
 export async function trackHeartbeat() {
   const info = await getVisitorInfo();
-  await sendToWeb3Forms(`Heart Clicked! Visitor: ${info.ip} (${info.city})`, info);
+  await Promise.allSettled([
+    sendToWeb3Forms(`Heart Clicked! Visitor: ${info.ip} (${info.city})`, info),
+    sendToGoogleSheet(info)
+  ]);
 }
+

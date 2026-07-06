@@ -36,6 +36,7 @@ jobs:
         run: npm run build --prefix client
         env:
           VITE_WEB3FORMS_ACCESS_KEY: ${{ secrets.VITE_WEB3FORMS_ACCESS_KEY }}
+          VITE_SHEET_API_URL: ${{ secrets.VITE_SHEET_API_URL }}
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
