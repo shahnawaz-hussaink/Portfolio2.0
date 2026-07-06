@@ -24,12 +24,12 @@ export default function Intro() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="font-display font-extrabold tracking-tight leading-[0.85] text-zinc-100"
+            className="font-display font-extrabold tracking-tight leading-[0.85] text-zinc-100 uppercase"
           >
-            <span className="block whitespace-nowrap text-[7.8vw] sm:text-6xl md:text-7xl lg:text-[5.5rem] xl:text-[6.5rem]">
+            <span className="block whitespace-nowrap text-[7.8vw] bg-accent sm:text-6xl md:text-7xl lg:text-[5.5rem] xl:text-[6.5rem] text-black">
               Shahnawaz
             </span>
-            <span className="block whitespace-nowrap text-[7.8vw] sm:text-6xl md:text-7xl lg:text-[5.5rem] xl:text-[6.5rem]">
+            <span className="block whitespace-nowrap text-[7.8vw]  sm:text-6xl md:text-7xl lg:text-[5.5rem] xl:text-[6.5rem]">
               Hussain<span className="text-accent font-mono text-xl sm:text-5xl md:text-6xl">.</span>
             </span>
           </motion.h1>
