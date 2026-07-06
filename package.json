@@ -1,0 +1,9 @@
+{
+  "name": "portfolio-root",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev --prefix client",
+    "build": "npm run build --prefix client",
+    "install-client": "npm install --prefix client"
+  }
+}

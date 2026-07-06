@@ -1,86 +1,118 @@
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
-export default function About() {
-  return (
-    <>
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, delay: 0.1 }}
-    >
-      <div
-        id="about"
-        className="about grid grid-cols-1 pb-10 lg:grid-cols-2 gap-12 px-6 sm:px-10 md:px-20 lg:px-32 max-w-screen-xl mx-auto mt-30 lg:mt-10"
-      >
-        <div>
-          <div className="font-mono mb-6">
-            <h1>
-              <a
-                className="text-white hover:text-emerald-400 transition"
-              >
-                <span className="about-num text-md lg:text-2xl text-emerald-400">01. </span>
-                <span className="about-heading text-2xl lg:text-3xl">About Me</span>
-              </a>
-            </h1>
-          </div>
 
-          <div className="about-text text-base sm:text-lg leading-relaxed font-normal">
-  <p className="mb-4">
-    Hello! I'm Shahnawaz, a third-year Computer Science undergrad at ARSD College,
-    University of Delhi. I got into web development out of curiosity — and somewhere
-    along the way, backend engineering became the thing I couldn't stop thinking about.
-    There's something satisfying about designing systems that hold up under real pressure.
-  </p>
-  <p className="mb-4">
-    Over the past year, I've gone deep on backend development — building an IRCTC-style
-    railway booking system with PostgreSQL and row-level locking, a real-time competitive
-    coding platform that ran live with 35+ participants, and several other projects around
-    auth, caching, queues, and API design. I don't just build to ship — I build to
-    understand how things actually work.
-  </p>
-  <p className="mb-4">
-    Right now I'm focused on system design fundamentals, Redis-based caching, BullMQ job
-    queues, and payment integrations. I'm also exploring DSA seriously and looking for
-    opportunities where I can contribute to real backend systems and keep growing fast.
-  </p>
-  <p className="mb-4">Here are a few technologies I've been working with recently:</p>
-  <div className="flex flex-wrap gap-10 mt-4">
-    <ul className="list-disc list-inside space-y-2">
-      <li>Node.js & Express</li>
-      <li>PostgreSQL & Prisma</li>
-      <li>MongoDB & Mongoose</li>
-      <li>Redis & BullMQ</li>
-    </ul>
-    <ul className="list-disc list-inside space-y-2">
-      <li>JWT & Auth flows</li>
-      <li>React & Tailwind CSS</li>
-      <li>Docker (learning)</li>
-      <li>Git & GitHub</li>
-    </ul>
-  </div>
-</div>
+export default function About() {
+  const [coords, setCoords] = useState({ x: 0, y: 0 });
+  const [isHovered, setIsHovered] = useState(false);
+  const containerRef = useRef(null);
+
+  const handleMouseMove = (e) => {
+    if (!containerRef.current) return;
+    const rect = containerRef.current.getBoundingClientRect();
+    const x = Math.round(e.clientX - rect.left);
+    const y = Math.round(e.clientY - rect.top);
+    setCoords({ x, y });
+  };
+
+  const skillsLeft = ["Node.js & Express", "PostgreSQL & Prisma", "MongoDB & Mongoose", "Redis & BullMQ"];
+  const skillsRight = ["JWT & Auth flows", "React & Tailwind CSS", "Docker (learning)", "Git & GitHub"];
+
+  return (
+    <section id="about" className="py-24 border-t border-zinc-800 relative">
+      <div className="max-w-screen-xl mx-auto px-6 sm:px-12 md:px-20 lg:px-32">
+        {/* Editorial Section Header */}
+        <div className="mb-16 font-mono">
+          <div className="text-xs text-accent tracking-[0.2em] uppercase mb-2">// 01_PROFILE_INFO</div>
+          <h2 className="font-display font-extrabold text-2xl sm:text-5xl lg:text-6xl tracking-tight text-zinc-100 uppercase">
+            About Me
+          </h2>
+          <div className="w-20 h-[2px] bg-accent mt-4"></div>
         </div>
 
-        <div className="relative w-64 h-64 mx-auto mt-10 group cursor-pointer">
-  
-  {/* Background placeholder box */}
-  <div className="absolute top-0 left-0 w-64 h-64 rounded-lg border-2 border-emerald-600 bg-emerald-950/40 transition-all duration-500 ease-in-out group-hover:bg-emerald-600/20" />
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+          {/* Content Column */}
+          <div className="lg:col-span-7 font-mono text-sm leading-relaxed text-zinc-400">
+            <p className="mb-6">
+              Hello! I'm Shahnawaz, a third-year Computer Science undergrad at ARSD College, University of Delhi. 
+              I got into web development out of curiosity — and somewhere along the way, backend engineering became the thing I couldn't stop thinking about. 
+              There's something satisfying about designing systems that hold up under real pressure.
+            </p>
+            <p className="mb-6">
+              Over the past year, I've gone deep on backend development — building an IRCTC-style railway booking system with PostgreSQL and row-level locking, a real-time competitive coding platform that ran live with 35+ participants, and several other projects around auth, caching, queues, and API design. 
+              I don't just build to ship — I build to understand how things actually work.
+            </p>
+            <p className="mb-6">
+              Right now I'm focused on system design fundamentals, Redis-based caching, BullMQ job queues, and payment integrations. 
+              I'm also exploring DSA seriously and looking for opportunities where I can contribute to real backend systems and keep growing fast.
+            </p>
 
-  {/* Emerald color overlay on photo — fades out on hover */}
-  <div className="absolute top-0 left-0 w-64 h-64 rounded-lg bg-emerald-700/40 sm:z-10 transition-all duration-500 ease-in-out group-hover:opacity-0" />
+            <div className="mt-8">
+              <span className="text-[10px] text-zinc-500 uppercase tracking-widest block mb-4">
+                // SYSTEM_DEPENDENCIES_LOADED
+              </span>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="flex flex-col gap-2">
+                  {skillsLeft.map((skill, index) => (
+                    <div key={index} className="flex items-center gap-2 text-xs hover:text-accent transition-colors duration-200">
+                      <span className="text-accent/60">→</span>
+                      <span>[ {skill} ]</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="flex flex-col gap-2">
+                  {skillsRight.map((skill, index) => (
+                    <div key={index} className="flex items-center gap-2 text-xs hover:text-accent transition-colors duration-200">
+                      <span className="text-accent/60">→</span>
+                      <span>[ {skill} ]</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
 
-  {/* Photo */}
-  <img
-    src="/Profile.webp"
-    alt="Shahnawaz Hussain"
-    className="absolute top-0 left-0 w-64 h-64 object-cover rounded-lg shadow-lg
-               transition-all duration-500 ease-in-out
-               group-hover:-translate-x-3 group-hover:-translate-y-3
-               group-hover:scale-105 group-hover:shadow-emerald-500/40 group-hover:shadow-2xl"
-  />
-</div>
+          {/* Photo Column */}
+          <div className="lg:col-span-5 flex justify-center lg:justify-end">
+            <div
+              ref={containerRef}
+              onMouseMove={handleMouseMove}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+              className="relative w-72 h-72 border border-zinc-800 bg-zinc-950 p-3 group cursor-none select-none transition-all duration-300 hover:border-accent/40"
+            >
+              {/* Photo Bounding Wireframe Corners */}
+              <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-zinc-700 group-hover:border-accent"></div>
+              <div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-zinc-700 group-hover:border-accent"></div>
+              <div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-zinc-700 group-hover:border-accent"></div>
+              <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-zinc-700 group-hover:border-accent"></div>
 
+              {/* Photo Image container */}
+              <div className="w-full h-full relative overflow-hidden bg-zinc-900 border border-zinc-800">
+                {/* Monochrome overlay which reveals on hover */}
+                <div className="absolute inset-0 bg-accent/15 mix-blend-color opacity-0 lg:opacity-100 lg:group-hover:opacity-0 transition-opacity duration-300 z-10 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-[#09090b]/20 opacity-0 lg:opacity-100 lg:group-hover:opacity-0 transition-opacity duration-300 z-10 pointer-events-none"></div>
+                
+                <img
+                  src="/Profile.webp"
+                  alt="Shahnawaz Hussain Profile"
+                  className="w-full h-full object-cover lg:grayscale lg:group-hover:grayscale-0 transition-all duration-500 scale-102 group-hover:scale-105"
+                  onError={(e) => {
+                    // Fallback to avatar style if profile webp fails
+                    e.target.style.display = "none";
+                  }}
+                />
+              </div>
+
+              {/* Live Technical Cursor Coordinates Tooltip */}
+              {isHovered && (
+                <div className="absolute -bottom-6 left-0 right-0 text-center font-mono text-[9px] text-accent tracking-widest uppercase">
+                  SYS_CAM_TRACK // X: {coords.x}px Y: {coords.y}px
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
       </div>
-      </motion.div>
-    </>
+    </section>
   );
 }

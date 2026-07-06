@@ -9,82 +9,80 @@ import {
 export default function Social() {
   return (
     <>
-      <div className="hidden lg:flex fixed left-6 bottom-0 translate-y-0 z-50 flex-col items-center gap-4">
+      <div className="hidden lg:flex fixed left-6 bottom-0 translate-y-0 z-40 flex-col items-center gap-5">
         <a
           href="https://github.com/shahnawaz-hussaink"
           target="_blank"
-          className="text-slate-600 hover:text-teal-600  transition-all duration-200 hover:scale-120"
+          rel="noopener noreferrer"
+          className="text-zinc-500 hover:text-accent transition-colors duration-200"
+          title="GitHub Profile"
         >
-          <Github size={24} />
+          <Github size={18} />
         </a>
         <a
           href="https://www.linkedin.com/in/shahnawaz-hussain-00b7b8226/"
           target="_blank"
-          className="text-slate-600 hover:text-teal-600  transition-all duration-200 hover:scale-120"
+          rel="noopener noreferrer"
+          className="text-zinc-500 hover:text-accent transition-colors duration-200"
+          title="LinkedIn Profile"
         >
-          <Linkedin size={24} />
+          <Linkedin size={18} />
         </a>
         <a
           href="https://x.com/k_shahnawazhuss"
           target="_blank"
-          className="text-slate-600 hover:text-teal-600  transition-all duration-200 hover:scale-120"
+          rel="noopener noreferrer"
+          className="text-zinc-500 hover:text-accent transition-colors duration-200"
+          title="Twitter Profile"
         >
-          <Twitter size={24} />
+          <Twitter size={18} />
         </a>
         <a
           href="https://www.instagram.com/shahnawaz.hussaink"
           target="_blank"
-          className="text-slate-600 hover:text-teal-600  transition-all duration-200 hover:scale-120"
+          rel="noopener noreferrer"
+          className="text-zinc-500 hover:text-accent transition-colors duration-200"
+          title="Instagram Profile"
         >
-          <Instagram size={24} />
-        </a>
-        <a
-          href="#"
-          target="_blank"
-          className="text-slate-600 hover:text-teal-600  transition-all duration-200 hover:scale-120"
-        >
-          <ExternalLink size={24} />
+          <Instagram size={18} />
         </a>
 
-        <div className="w-[2px] h-40 mt-2 bg-slate-600"></div>
+        <div className="w-[1px] h-32 bg-zinc-800"></div>
       </div>
 
-        {/* its for mobile / cmall screen */}
-      <div className="lg:hidden flex  gap-5 lg:gap-10 px-6 lg:px-32 mt-30 w-fit mx-auto text-center mb-10 lg:mb-30">
+      {/* For mobile / small screens */}
+      <div className="lg:hidden flex gap-6 px-6 mt-16 w-fit mx-auto text-center mb-8">
         <a
           href="https://github.com/shahnawaz-hussaink"
           target="_blank"
-          className="text-slate-600 hover:text-teal-600"
+          rel="noopener noreferrer"
+          className="text-zinc-500 hover:text-accent transition-colors"
         >
-          <Github size={24} />
+          <Github size={20} />
         </a>
         <a
           href="https://www.linkedin.com/in/shahnawaz-hussain-00b7b8226/"
           target="_blank"
-          className="text-slate-600 hover:text-teal-600"
+          rel="noopener noreferrer"
+          className="text-zinc-500 hover:text-accent transition-colors"
         >
-          <Linkedin size={24} />
+          <Linkedin size={20} />
         </a>
         <a
           href="https://x.com/k_shahnawazhuss"
           target="_blank"
-          className="text-slate-600 hover:text-teal-600"
+          rel="noopener noreferrer"
+          className="text-zinc-500 hover:text-accent transition-colors"
         >
-          <Twitter size={24} />
+          <Twitter size={20} />
         </a>
         <a
           href="https://www.instagram.com/shahnawaz.hussaink"
           target="_blank"
-          className="text-slate-600 hover:text-teal-600"
+          rel="noopener noreferrer"
+          className="text-zinc-500 hover:text-accent transition-colors"
         >
-          <Instagram size={24} />
-        </a>
-        <a
-          href="#"
-          target="_blank"
-          className="text-slate-600 hover:text-teal-600"
-        >
-          <ExternalLink size={24} />
+          <Instagram size={20} />
         </a>
       </div>
     </>

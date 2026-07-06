@@ -14,12 +14,11 @@ export default function Home() {
       const delta = currentScrollY - lastScrollYRef.current;
 
       if (Math.abs(delta) > 6) {
-        if (delta > 0) {
+        if (delta > 0 && currentScrollY > 100) {
           setShowNavbar(false);
         } else {
           setShowNavbar(true);
         }
-
         lastScrollYRef.current = currentScrollY;
       }
     };
@@ -31,92 +30,128 @@ export default function Home() {
   return (
     <>
       <motion.div
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.4 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
       >
         <nav
-          className={`fixed top-0 left-0 w-full h-24 z-50 px-6 sm:px-8 flex items-center justify-between transition-transform duration-500 font-mono ${
+          className={`fixed top-0 left-0 w-full h-20 z-50 px-6 sm:px-12 flex items-center justify-between transition-transform duration-300 font-mono ${
             showNavbar ? "translate-y-0" : "-translate-y-full"
-          } bg-slate-900/60 backdrop-blur-sm text-white shadow-md border-b border-slate-950`}
+          } bg-[#09090b]/90 backdrop-blur-md text-zinc-100 border-b border-zinc-800`}
         >
-         
-            <div className="h-full flex items-center">
-            <img src="./Logo.png" alt="Logo" className="h-12 w-auto" />
+          {/* Logo / Brand */}
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 border border-accent flex items-center justify-center font-bold text-accent font-display text-sm tracking-tight">
+              S
             </div>
+            <span className="text-xs uppercase tracking-widest  sm:inline-block font-mono text-zinc-400">
+              BACKEND DEVELOPER
+            </span>
+          </div>
 
-
-          <div className="hidden lg:flex items-center gap-10">
-            <a href="#about" className="hover:text-emerald-400 transition">
-              <span className="text-emerald-400">01.</span> About
+          {/* Desktop Nav Links */}
+          <div className="hidden lg:flex items-center gap-8">
+            <a href="#about" className="group text-xs text-zinc-400 hover:text-accent transition-colors py-2 relative">
+              <span className="text-accent/60 mr-1 text-[10px]">01_</span>
+              <span className="relative">
+                ABOUT
+                <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-accent transition-all group-hover:w-full"></span>
+              </span>
             </a>
-            <a href="#experience" className="hover:text-emerald-400 transition">
-              <span className="text-emerald-400">02.</span> Experience
+            <a href="#experience" className="group text-xs text-zinc-400 hover:text-accent transition-colors py-2 relative">
+              <span className="text-accent/60 mr-1 text-[10px]">02_</span>
+              <span className="relative">
+                EXPERIENCE
+                <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-accent transition-all group-hover:w-full"></span>
+              </span>
             </a>
-            <a href="#work" className="hover:text-emerald-400 transition">
-              <span className="text-emerald-400">03.</span> Work
+            <a href="#work" className="group text-xs text-zinc-400 hover:text-accent transition-colors py-2 relative">
+              <span className="text-accent/60 mr-1 text-[10px]">03_</span>
+              <span className="relative">
+                PROJECTS
+                <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-accent transition-all group-hover:w-full"></span>
+              </span>
             </a>
-            <a href="#contact" className="hover:text-emerald-400 transition">
-              <span className="text-emerald-400">04.</span> Contact
+            <a href="#contact" className="group text-xs text-zinc-400 hover:text-accent transition-colors py-2 relative">
+              <span className="text-accent/60 mr-1 text-[10px]">04_</span>
+              <span className="relative">
+                CONNECT
+                <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-accent transition-all group-hover:w-full"></span>
+              </span>
             </a>
             <button
-              className="ml-4 px-5 py-2 border-2 border-emerald-400 rounded text-emerald-400 transition-all duration-200 hover:bg-emerald-300 hover:text-gray-900 hover:-translate-x-1 hover:-translate-y-1 hover:scale-110 hover:shadow-lg hover:shadow-emerald-400/30"
+              className="ml-4 px-4 py-1.5 border border-accent/40 hover:border-accent text-accent bg-transparent text-xs tracking-wider uppercase transition-all duration-200 hover:bg-accent/5"
               onClick={() => window.open("./Resume.pdf", "_blank")}
             >
-              Resume
+              [ RESUME ]
             </button>
           </div>
+
+          {/* Mobile Menu Icon */}
           <button
-            className="lg:hidden text-white"
+            className="lg:hidden text-zinc-400 hover:text-accent py-2 transition-colors"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle Menu"
           >
             {menuOpen ? (
-              <X size={28} className="text-emerald-400" />
+              <X size={20} className="text-accent" />
             ) : (
-              <Menu size={28} className="text-emerald-400" />
+              <Menu size={20} />
             )}
           </button>
         </nav>
+
+        {/* Mobile Sidebar overlay */}
         {menuOpen && (
-          <div className="lg:hidden fixed top-24 right-0 w-1/2 h-[60vh] bg-slate-900/90 backdrop-blur-md text-white flex flex-col items-start gap-6 px-6 py-6 z-40 shadow-lg rounded-bl-lg">
-            <a
-              href="#about"
-              onClick={() => setMenuOpen(false)}
-              className="hover:text-emerald-400 transition"
-            >
-              <span className="text-emerald-400">01.</span> About
-            </a>
-            <a
-              href="#experience"
-              onClick={() => setMenuOpen(false)}
-              className="hover:text-emerald-400 transition"
-            >
-              <span className="text-emerald-400">02.</span> Experience
-            </a>
-            <a
-              href="#work"
-              onClick={() => setMenuOpen(false)}
-              className="hover:text-emerald-400 transition"
-            >
-              <span className="text-emerald-400">03.</span> Work
-            </a>
-            <a
-              href="#contact"
-              onClick={() => setMenuOpen(false)}
-              className="hover:text-emerald-400 transition"
-            >
-              <span className="text-emerald-400">04.</span> Contact
-            </a>
-            <button
-              className="mt-2 px-5 py-2 border-2 text-emerald-400 rounded hover:text-emerald-400ransition cursor-pointer"
-              onClick={() => {
-                setMenuOpen(false);
-                window.open("./Resume.pdf", "_blank");
-              }}
-            >
-              Resume
-            </button>
+          <div className="lg:hidden fixed top-20 right-0 w-full sm:w-80 h-[calc(100vh-80px)] bg-[#09090b]/95 backdrop-blur-lg border-l border-zinc-800 text-zinc-100 flex flex-col justify-between p-8 z-40 shadow-2xl">
+            <div className="flex flex-col gap-6 font-mono">
+              <span className="text-[10px] text-zinc-500 tracking-widest border-b border-zinc-800 pb-2 uppercase">
+                Diagnostic Index
+              </span>
+              <a
+                href="#about"
+                onClick={() => setMenuOpen(false)}
+                className="text-sm tracking-wider hover:text-accent py-2 border-b border-zinc-900"
+              >
+                <span className="text-accent text-xs mr-2">01 //</span> ABOUT
+              </a>
+              <a
+                href="#experience"
+                onClick={() => setMenuOpen(false)}
+                className="text-sm tracking-wider hover:text-accent py-2 border-b border-zinc-900"
+              >
+                <span className="text-accent text-xs mr-2">02 //</span> EXPERIENCE
+              </a>
+              <a
+                href="#work"
+                onClick={() => setMenuOpen(false)}
+                className="text-sm tracking-wider hover:text-accent py-2 border-b border-zinc-900"
+              >
+                <span className="text-accent text-xs mr-2">03 //</span> PROJECTS
+              </a>
+              <a
+                href="#contact"
+                onClick={() => setMenuOpen(false)}
+                className="text-sm tracking-wider hover:text-accent py-2 border-b border-zinc-900"
+              >
+                <span className="text-accent text-xs mr-2">04 //</span> CONNECT
+              </a>
+            </div>
+            
+            <div>
+              <button
+                className="w-full py-3 border border-accent text-accent bg-transparent tracking-widest text-xs uppercase hover:bg-accent/10 transition-colors"
+                onClick={() => {
+                  setMenuOpen(false);
+                  window.open("./Resume.pdf", "_blank");
+                }}
+              >
+                Download Resume
+              </button>
+              <div className="mt-4 text-[9px] text-zinc-600 text-center font-mono">
+                SYS_VER_2.0.4 // ARSD_CS
+              </div>
+            </div>
           </div>
         )}
       </motion.div>

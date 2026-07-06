@@ -1,15 +1,32 @@
-
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color-scheme: dark;
+  color: #f4f4f5;
+  background-color: #09090b;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Hide default cursor on desktop/fine-pointer screens so we can render our custom crosshair cursor */
+@media (pointer: fine) {
+  html, body, a, button, select, input, textarea, [role="button"] {
+    cursor: none !important;
+  }
+}
+
+/* Custom technical text selection */
+::selection {
+  background-color: #dfff00;
+  color: #09090b;
+}
+
+::-moz-selection {
+  background-color: #dfff00;
+  color: #09090b;
+}
+

@@ -1,49 +1,43 @@
 import Footer from "../components/Footer";
 import Social from "../components/Social";
+
 export default function Contact() {
   return (
     <>
-      <div
+      <section
         id="contact"
-        className="contact px-6 lg:px-32 mt-30 max-w-4xl mx-auto text-center mb-30"
+        className="py-24 border-t border-zinc-800 relative bg-[#09090b]"
       >
-        <div className="font-mono mb-6">
-          <h1>
-            <a
-              className="text-white hover:text-emerald-400 transition"
-            >
-              <span className="text-xs lg:text-md text-emerald-400">04.</span>
-              <span className="text-xs lg:text-md text-emerald-400">
-                &nbsp;Let’s Connect & Build
-              </span>
-            </a>
-          </h1>
-        </div>
+        <div className="max-w-4xl mx-auto px-6 text-center font-mono">
+          {/* Section Header */}
+          <div className="mb-12 font-mono flex flex-col items-center">
+            <span className="text-xs text-accent tracking-[0.2em] uppercase mb-2">// 04_CONNECT_STREAM</span>
+            <h2 className="font-display font-extrabold text-2xl sm:text-5xl lg:text-6xl tracking-tight text-zinc-100 uppercase">
+              Get In Touch
+            </h2>
+            <div className="w-20 h-[2px] bg-accent mt-4"></div>
+          </div>
 
-        <div className="text-center pb-10">
-          <span className="block name text-2xl md:text-4xl lg:text-5xl mb-4">
-            Reach Out & Code
-          </span>
-          <p className="max-w-2xl mx-auto contact-content">
-            I'm a CS undergrad actively looking for backend development
-internships and collaborative projects. If you're working on something
-that involves real backend challenges — APIs, databases, queues, or
-system design — I'd genuinely love to hear about it. Feel free to reach
-out, I respond fast.
-          </p>
+          <div className="text-center pb-8 mt-6">
+            <p className="max-w-xl mx-auto text-zinc-400 text-xs sm:text-sm leading-relaxed">
+              I'm a CS undergrad actively looking for backend development internships and collaborative opportunities. 
+              If you're working on something that involves real backend challenges — distributed structures, transaction locking, caching, or database optimization — I'd genuinely love to hear about it.
+            </p>
+          </div>
+          
+          <div className="mt-8 flex justify-center">
+            <a href="mailto:shahnawaz.hussain96508@gmail.com" className="cursor-none">
+              <button
+                className="px-8 py-3.5 text-xs font-semibold text-accent border border-accent bg-transparent tracking-widest uppercase hover:bg-accent hover:text-neutral-bg transition-all duration-200 cursor-none"
+              >
+                [ EXECUTE: SAY_HELLO ]
+              </button>
+            </a>
+          </div>
         </div>
-        <div className="mt-10 flex justify-center">
-          <a href="mailto:shahnawaz.hussain96508@gmail.com">
-            <button
-              className="px-8 py-4 text-md font-semibold text-emerald-400 border border-emerald-400 rounded hover:bg-emerald-300 hover:text-gray-900 hover:text-md hover:-translate-x-1 hover:-translate-y-1 hover:scale-110 transition-all hover:shadow-lg hover:shadow-emerald-400/30 font-mono cursor-pointer"
-            >
-              Say Hello!
-            </button>
-          </a>
-        </div>
-      </div>
-      <Social/>
-      <Footer/>
+      </section>
+      <Social />
+      <Footer />
     </>
   );
 }
