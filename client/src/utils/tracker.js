@@ -15,6 +15,8 @@ async function getVisitorInfo() {
       region: data.region,
       country: data.country_name,
       isp: data.org,
+      latitude: data.latitude,
+      longitude: data.longitude,
       device: navigator.userAgent
     };
     return visitorDataCache;
@@ -26,6 +28,8 @@ async function getVisitorInfo() {
       region: "UNKNOWN_REGION",
       country: "UNKNOWN_COUNTRY",
       isp: "UNKNOWN_ISP",
+      latitude: "UNKNOWN_LAT",
+      longitude: "UNKNOWN_LON",
       device: navigator.userAgent
     };
     return visitorDataCache;
@@ -50,6 +54,7 @@ async function sendToWeb3Forms(subject, details) {
         ------------------------------
         IP Address: ${details.ip}
         Location: ${details.city}, ${details.region}, ${details.country}
+        Coordinates: Latitude: ${details.latitude}, Longitude: ${details.longitude}
         ISP/Org: ${details.isp}
         Browser/Device: ${details.device}
         Time: ${new Date().toLocaleString()}
