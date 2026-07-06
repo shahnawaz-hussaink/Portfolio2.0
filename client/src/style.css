@@ -95,3 +95,14 @@ html, body {
   background-size: 100% 4px, 6px 100%;
   pointer-events: none;
 }
+
+/* Blinking terminal caret */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
