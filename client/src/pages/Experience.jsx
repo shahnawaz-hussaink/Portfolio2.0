@@ -103,27 +103,7 @@ export default function Work() {
                   </div>
                 </div>
 
-                {/* Sub-block showing associated hackathon media/outlines */}
-                <div className="mt-8 border-t border-zinc-900 pt-6 flex flex-col sm:flex-row items-center gap-6 justify-between">
-                  <div className="text-[9px] text-zinc-600 font-mono flex flex-col gap-1 max-w-[200px]">
-                    <span>IMAGE_RESOURCE: "{activeExperience.image}"</span>
-                    <span>ASSET_STATUS: FRAMED_OK</span>
-                  </div>
 
-                  <div className="relative w-36 h-20 border border-zinc-800 bg-zinc-900 overflow-hidden flex items-center justify-center p-1 group">
-                    <div className="absolute inset-0 bg-accent/10 pointer-events-none z-10 mix-blend-color group-hover:opacity-0 transition-opacity"></div>
-                    <img
-                      src={activeExperience.image}
-                      alt={`${activeExperience.company} preview`}
-                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300 scale-102"
-                      onError={(e) => {
-                        // Fallback to text box if image doesn't exist locally
-                        e.target.style.display = "none";
-                      }}
-                    />
-                    <div className="absolute inset-0 border border-transparent group-hover:border-accent/40 transition-colors pointer-events-none"></div>
-                  </div>
-                </div>
               </>
             ) : (
               <div className="flex items-center justify-center h-full text-zinc-600">
