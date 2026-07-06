@@ -5,25 +5,41 @@ let visitorDataCache = null;
 // Helper to fetch IP and geo info
 async function getVisitorInfo() {
   if (visitorDataCache) return visitorDataCache;
+  let ipv4 = "UNKNOWN_IP";
   try {
-    const res = await fetch("https://ipapi.co/json/");
+    // Force IPv4 retrieval by querying an IPv4-only DNS record endpoint
+    const ipRes = await fetch("https://api4.ipify.org?format=json");
+    if (ipRes.ok) {
+      const ipData = await ipRes.json();
+      ipv4 = ipData.ip;
+    }
+  } catch (ipError) {
+    console.warn("Failed to fetch IPv4 from ipify:", ipError);
+  }
+
+  try {
+    const url = ipv4 !== "UNKNOWN_IP" 
+      ? `https://ipapi.co/${ipv4}/json/` 
+      : "https://ipapi.co/json/";
+      
+    const res = await fetch(url);
     if (!res.ok) throw new Error("IP API failed");
     const data = await res.json();
     visitorDataCache = {
-      ip: data.ip,
-      city: data.city,
-      region: data.region,
-      country: data.country_name,
-      isp: data.org,
-      latitude: data.latitude,
-      longitude: data.longitude,
+      ip: ipv4 !== "UNKNOWN_IP" ? ipv4 : data.ip,
+      city: data.city || "UNKNOWN_CITY",
+      region: data.region || "UNKNOWN_REGION",
+      country: data.country_name || "UNKNOWN_COUNTRY",
+      isp: data.org || "UNKNOWN_ISP",
+      latitude: data.latitude || "UNKNOWN_LAT",
+      longitude: data.longitude || "UNKNOWN_LON",
       device: navigator.userAgent
     };
     return visitorDataCache;
   } catch (error) {
     // Basic fallback if ipapi.co fails or is blocked
     visitorDataCache = {
-      ip: "UNKNOWN_IP",
+      ip: ipv4,
       city: "UNKNOWN_CITY",
       region: "UNKNOWN_REGION",
       country: "UNKNOWN_COUNTRY",
