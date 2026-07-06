@@ -27,6 +27,18 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [menuOpen]);
+
   return (
     <>
       <motion.div
@@ -36,7 +48,7 @@ export default function Home() {
       >
         <nav
           className={`fixed top-0 left-0 w-full h-20 z-50 px-6 sm:px-12 flex items-center justify-between transition-transform duration-300 font-mono ${
-            showNavbar ? "translate-y-0" : "-translate-y-full"
+            (showNavbar || menuOpen) ? "translate-y-0" : "-translate-y-full"
           } bg-[#09090b]/90 backdrop-blur-md text-zinc-100 border-b border-zinc-800`}
         >
           {/* Logo / Brand */}
@@ -89,17 +101,25 @@ export default function Home() {
 
           {/* Mobile Menu Icon */}
           <button
-            className="lg:hidden text-zinc-400 hover:text-accent py-2 transition-colors"
+            className="lg:hidden text-zinc-400 hover:text-accent p-2 -mr-2 transition-colors cursor-none"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle Menu"
           >
             {menuOpen ? (
-              <X size={20} className="text-accent" />
+              <X size={24} className="text-accent" />
             ) : (
-              <Menu size={20} />
+              <Menu size={24} />
             )}
           </button>
         </nav>
+
+        {/* Backdrop Dismiss Overlay */}
+        {menuOpen && (
+          <div
+            className="lg:hidden fixed inset-0 top-20 bg-black/60 z-30 transition-opacity duration-300"
+            onClick={() => setMenuOpen(false)}
+          />
+        )}
 
         {/* Mobile Sidebar overlay */}
         {menuOpen && (
@@ -140,7 +160,7 @@ export default function Home() {
             
             <div>
               <button
-                className="w-full py-3 border border-accent text-accent bg-transparent tracking-widest text-xs uppercase hover:bg-accent/10 transition-colors"
+                className="w-full my-16 py-3 border border-accent text-accent bg-transparent tracking-widest text-xs uppercase hover:bg-accent/10 transition-colors"
                 onClick={() => {
                   setMenuOpen(false);
                   window.open("./Resume.pdf", "_blank");
