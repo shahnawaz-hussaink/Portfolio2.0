@@ -16,6 +16,8 @@ export default function CustomCursor() {
 
     const onMouseMove = (e) => {
       if (cursorRef.current && cursorDotRef.current) {
+        cursorRef.current.style.opacity = "1";
+        cursorDotRef.current.style.opacity = "1";
         cursorRef.current.style.transform = `translate3d(${e.clientX - 16}px, ${e.clientY - 16}px, 0)`;
         cursorDotRef.current.style.transform = `translate3d(${e.clientX - 2}px, ${e.clientY - 2}px, 0)`;
       }

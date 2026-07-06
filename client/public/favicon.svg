@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" rx="16" fill="#09090b"/>
+  <!-- Vector border with thin line and chroma acid highlight -->
+  <rect x="5" y="5" width="90" height="90" rx="12" fill="none" stroke="#27272a" stroke-width="2"/>
+  <rect x="5" y="5" width="20" height="20" rx="2" fill="none" stroke="#dfff00" stroke-width="1.5"/>
+  <text x="50%" y="64%" font-family="monospace" font-weight="900" font-size="46" fill="#dfff00" text-anchor="middle">[S]</text>
+</svg>
