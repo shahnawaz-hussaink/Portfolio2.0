@@ -39,7 +39,7 @@ export default function Work() {
               >
                 {/* 1. Large Technical Stat Callout (Left Column) */}
                 <div className="lg:col-span-3 font-mono">
-                  <span className="text-[10px] text-zinc-600 block mb-2 uppercase">
+                  <span className="text-[10px] text-accent block mb-2 uppercase">
                     // ENGINE_STATUS_0{index + 1}
                   </span>
                 </div>
@@ -68,24 +68,45 @@ export default function Work() {
 
                   {/* Source Links */}
                   <div className="mt-6 flex gap-4">
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs font-semibold text-accent border border-accent/30 hover:border-accent hover:bg-accent hover:text-neutral-bg px-4 py-2 bg-zinc-950/60 tracking-wider uppercase transition-all duration-300 flex items-center gap-2 rounded-sm cursor-none"
-                    >
-                      <Github size={13} />
-                      <span>CODE</span>
-                    </a>
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs font-semibold text-accent border border-accent/30 hover:border-accent hover:bg-accent hover:text-neutral-bg px-4 py-2 bg-zinc-950/60 tracking-wider uppercase transition-all duration-300 flex items-center gap-2 rounded-sm cursor-none"
-                    >
-                      <ExternalLink size={13} />
-                      <span>DEPLOY</span>
-                    </a>
+                    {project.isPrivate ? (
+                      <>
+                        <button
+                          disabled
+                          className="text-[10px] sm:text-xs font-semibold text-zinc-500 border border-zinc-800/80 px-4 py-2 bg-zinc-950/20 tracking-wider uppercase flex items-center gap-2 rounded-sm select-none opacity-50 cursor-not-allowed"
+                        >
+                          <Github size={13} />
+                          <span>PRIVATE CODE</span>
+                        </button>
+                        <button
+                          disabled
+                          className="text-[10px] sm:text-xs font-semibold text-zinc-500 border border-zinc-800/80 px-4 py-2 bg-zinc-950/20 tracking-wider uppercase flex items-center gap-2 rounded-sm select-none opacity-50 cursor-not-allowed"
+                        >
+                          <ExternalLink size={13} />
+                          <span>PRIVATE DEPLOY</span>
+                        </button>
+                      </>
+                    ) : (
+                      <>
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs font-semibold text-accent border border-accent/30 hover:border-accent hover:bg-accent hover:text-neutral-bg px-4 py-2 bg-zinc-950/60 tracking-wider uppercase transition-all duration-300 flex items-center gap-2 rounded-sm cursor-none"
+                        >
+                          <Github size={13} />
+                          <span>CODE</span>
+                        </a>
+                        <a
+                          href={project.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs font-semibold text-accent border border-accent/30 hover:border-accent hover:bg-accent hover:text-neutral-bg px-4 py-2 bg-zinc-950/60 tracking-wider uppercase transition-all duration-300 flex items-center gap-2 rounded-sm cursor-none"
+                        >
+                          <ExternalLink size={13} />
+                          <span>DEPLOY</span>
+                        </a>
+                      </>
+                    )}
                   </div>
                 </div>
 
@@ -98,23 +119,38 @@ export default function Work() {
                     <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-zinc-700"></div>
                     <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-zinc-700"></div>
 
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block w-full h-full relative overflow-hidden cursor-none"
-                    >
-                      <div className="absolute inset-0 bg-accent/5 mix-blend-color opacity-0 lg:opacity-100 lg:group-hover/image:opacity-0 transition-opacity duration-300 z-10 pointer-events-none"></div>
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        loading="lazy"
-                        className="w-full h-full object-cover lg:grayscale opacity-100 lg:opacity-70 lg:group-hover/image:grayscale-0 lg:group-hover/image:opacity-100 group-hover/image:scale-105 transition-all duration-500"
-                        onError={(e) => {
-                          e.target.style.display = "none";
-                        }}
-                      />
-                    </a>
+                    {project.isPrivate ? (
+                      <div className="block w-full h-full relative overflow-hidden">
+                        <div className="absolute inset-0 bg-accent/5 mix-blend-color opacity-0 lg:opacity-100 transition-opacity duration-300 z-10 pointer-events-none"></div>
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          loading="lazy"
+                          className="w-full h-full object-cover lg:grayscale opacity-100 lg:opacity-70 group-hover/image:scale-105 transition-all duration-500"
+                          onError={(e) => {
+                            e.target.style.display = "none";
+                          }}
+                        />
+                      </div>
+                    ) : (
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block w-full h-full relative overflow-hidden cursor-none"
+                      >
+                        <div className="absolute inset-0 bg-accent/5 mix-blend-color opacity-0 lg:opacity-100 lg:group-hover/image:opacity-0 transition-opacity duration-300 z-10 pointer-events-none"></div>
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          loading="lazy"
+                          className="w-full h-full object-cover lg:grayscale opacity-100 lg:opacity-70 lg:group-hover/image:grayscale-0 lg:group-hover/image:opacity-100 group-hover/image:scale-105 transition-all duration-500"
+                          onError={(e) => {
+                            e.target.style.display = "none";
+                          }}
+                        />
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>

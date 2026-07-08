@@ -36,7 +36,7 @@ async function getVisitorInfo() {
       device: navigator.userAgent
     };
     return visitorDataCache;
-  } catch (error) {
+  } catch {
     // Basic fallback if ipapi.co fails or is blocked
     visitorDataCache = {
       ip: ipv4,

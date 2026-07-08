@@ -1,5 +1,20 @@
 const projects = [
   {
+    title: "MOSAI Website Backend",
+    image: "./mosai-backend.png",
+    desc: "Contributed to a production-ready headless CMS backend for MOSAI using Payload CMS, Next.js, TypeScript, and PostgreSQL. Developed dynamic content collections, implemented role-based access control, and built structured REST and GraphQL APIs for efficient content management and delivery.",
+    stack: [
+      "Payload CMS",
+      "Node.js, Express",
+      "MongoDB",
+      "REST & GraphQL APIs",
+      "Role-Based Access Control (RBAC)",
+      "Vite",
+    ],
+    github: "https://github.com/u-b-001/main",
+    live: "https://mosai.org.in",
+  },
+  {
     title: "IRCTC-Style Railway Booking Backend",
     image: "./irctc-backend.webp",
     desc: "This project is a production-grade railway booking backend built with PostgreSQL and Prisma, designed to handle the core challenges of a real ticketing system. It implements row-level locking via SELECT FOR UPDATE inside ACID transactions to prevent race conditions and double bookings under concurrent load. Features include JWT-based auth, role-separated admin and user routes, automated seat generation, and a full payment flow — all structured around a normalized relational schema.",
@@ -9,7 +24,7 @@ const projects = [
       "Prisma ORM",
       "JWT Authentication",
       "ACID Transactions & Row-Level Locking",
-      "REST API Design"
+      "REST API Design",
     ],
     github: "https://github.com/shahnawaz-hussaink/irctc-backend",
     live: "https://github.com/shahnawaz-hussaink/irctc-backend",
@@ -25,7 +40,7 @@ const projects = [
       "Firebase Firestore (Realtime)",
       "Monaco Editor",
       "Judge0 API",
-      "Vercel & Render (Deployment)"
+      "Vercel & Render (Deployment)",
     ],
     github: "https://github.com/shahnawaz-hussaink/debug-arena",
     live: "https://debug-arena.vercel.app/",
@@ -40,7 +55,7 @@ const projects = [
       "JWT (Access & Refresh Tokens)",
       "Multer, Cloudinary",
       "Aggregation Pipelines",
-      "MVC Architecture"
+      "MVC Architecture",
     ],
     github: "https://github.com/shahnawaz-hussaink/Backend_Video_Tube",
     live: "https://github.com/shahnawaz-hussaink/Backend_Video_Tube",
@@ -55,7 +70,7 @@ const projects = [
       "JWT Authentication",
       "NanoID",
       "IP Geolocation",
-      "Click Analytics"
+      "Click Analytics",
     ],
     github: "https://github.com/shahnawaz-hussaink/URL-Shortener",
     live: "https://github.com/shahnawaz-hussaink/URL-Shortener",
@@ -69,7 +84,7 @@ const projects = [
       "Tailwind CSS, Framer Motion",
       "Leaflet.js (Maps)",
       "Supabase (Auth & Backend)",
-      "PostgreSQL"
+      "PostgreSQL",
     ],
     github: "https://github.com/shahnawaz-hussaink/pyFit",
     live: "https://pyFit.in/",
@@ -81,7 +96,7 @@ const projects = [
     stack: [
       "React, Tailwind CSS",
       "Node.js, Express.js, JWT Authentication",
-      "MongoDB Cloud"
+      "MongoDB Cloud",
     ],
     github: "https://github.com/shahnawaz-hussaink/studx",
     live: "https://github.com/shahnawaz-hussaink/studx",
@@ -90,9 +105,7 @@ const projects = [
     title: "Portfolio Website",
     image: "./Portfolio.webp",
     desc: "I designed and developed a fully responsive personal portfolio using React and Tailwind CSS. It showcases my projects, skills, and experience in a clean and accessible layout, with smooth transitions and a modern UI to highlight my web development capabilities.",
-    stack: [
-      "HTML, CSS, JavaScript, React"
-    ],
+    stack: ["HTML, CSS, JavaScript, React"],
     github: "https://github.com/shahnawaz-hussaink/portfolio2.0",
     live: "https://portfolio2-0-pi-nine.vercel.app",
   },
@@ -102,7 +115,7 @@ const projects = [
     desc: "An earlier version of my personal portfolio built with vanilla HTML, CSS, and JavaScript. Featured a responsive layout, smooth scrolling, and interactive sections for About, Projects, and Contact.",
     stack: ["HTML, CSS, JavaScript"],
     github: "https://github.com/shahnawaz-hussaink/Portfolio",
-    live: "https://shahnawaz-hussaink.github.io/Portfolio/"
+    live: "https://shahnawaz-hussaink.github.io/Portfolio/",
   },
   {
     title: "Netflix.com Clone",
@@ -116,11 +129,7 @@ const projects = [
     title: "Random Dog Image Generator",
     image: "./RandomDog.webp",
     desc: "A fun interactive app that fetches and displays a new dog image on every button click using the Dog CEO API. Demonstrates Fetch API, async/await patterns, and DOM manipulation in a lightweight vanilla JS project.",
-    stack: [
-      "HTML, CSS, JavaScript",
-      "Dog CEO API",
-      "Fetch API, async/await"
-    ],
+    stack: ["HTML, CSS, JavaScript", "Dog CEO API", "Fetch API, async/await"],
     github: "https://github.com/shahnawaz-hussaink/Project-Dog",
     live: "https://shahnawaz-hussaink.github.io/Project-Dog/",
   },
