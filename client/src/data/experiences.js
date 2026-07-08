@@ -2,7 +2,7 @@ const experiences = [
   {
     id: 1,
     title: "Developer",
-    company: "Cyber Physical Systems Laboratory",
+    company: "Cyber Physical Systems Lab, University of Delhi",
     date: "Jun 2026 - Present",
     type: "WORK",
     description: [

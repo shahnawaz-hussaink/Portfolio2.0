@@ -40,16 +40,16 @@ export default function About() {
           {/* Content Column */}
           <div className="lg:col-span-7 font-mono text-sm leading-relaxed text-zinc-400">
             <p className="mb-6">
-              Hello! I'm <a href="https://github.com/shahnawaz-hussaink" className="text-accent"> Shahnawaz</a>, a CS undergrad at ARSD College, University of Delhi, specializing in backend engineering and database systems. 
-              I love designing clean server architectures and database schemas that perform under concurrent load.
+              Hi, I'm <a href="https://github.com/shahnawaz-hussaink" className="text-accent">Shahnawaz</a>, a CS undergrad at ARSD College, University of Delhi, focused on backend development. 
+              I enjoy building server-side systems and working with databases, especially the parts that involve Data and handling load reliably.
             </p>
             <p className="mb-6">
-              I've built real-time platforms (like a live competitive coding engine for 35+ users) and transactional databases using row-level locking. 
-              I expand my stack across environments, writing services in Go (Golang) and developing modular client applications with React/Next.js and Angular.
+              I've worked on projects like a real-time platform for multiple concurrent users and a booking system that uses row-level locking to handle simultaneous transactions safely. 
+              I mainly work with Node.js and PostgreSQL, and I'm comfortable picking up new tools when a project calls for it, including Go and frameworks like React, Next.js, and Angular.
             </p>
             <p className="mb-6">
-              Currently, I'm a Developer at the Cyber Physical Systems (CyPsi) Lab, building real-time backend architectures and high-frequency data ingestion APIs for telemetry networks. 
-              Alongside this, I'm refining my skills in Redis caching, BullMQ, and system design, while seeking backend engineering opportunities to solve complex scaling bottlenecks.
+              I'm currently a intern at the Cyber Physical Systems (CyPSi) Lab, University of Delhi, where I work on backend systems. 
+              Outside of that, I'm continuing to build with Redis, BullMQ, and general system design, and I'm open to backend engineering opportunities where I can work on real scaling and reliability problems.
             </p>
 
             <div className="mt-8">
